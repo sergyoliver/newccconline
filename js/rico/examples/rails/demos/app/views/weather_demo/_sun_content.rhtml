@@ -1,0 +1,19 @@
+
+<div><image id="sunImg" src="<%="/images/weather/sun.png"%>"></image></div>
+<div>
+<br/>
+   <table cellspacing="0" cellpadding="0" border="0">
+      <tr class="weatherDetail">
+         <td class="weatherDetailTitle">UV Index:</td>
+         <td><%= @weather.cc.uv.i%></td></tr>
+      <tr class="weatherDetail">
+         <td class="weatherDetailTitle">UV Strength:</td>
+         <td><%= @weather.cc.uv.t%></td></tr>
+      <tr class="weatherDetail">
+         <td class="weatherDetailTitle">Sunrise:</td>
+         <td><%=@weather.loc.sunr%></td></tr>
+      <tr class="weatherDetail">
+         <td class="weatherDetailTitle">Sunset:</td>
+         <td><%=@weather.loc.suns%></td></tr>
+   </table>
+</div>

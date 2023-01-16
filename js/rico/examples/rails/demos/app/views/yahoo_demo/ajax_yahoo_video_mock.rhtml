@@ -1,0 +1,631 @@
+<ajax-response>
+  <response type="object" id="videoSearchResultsGrid_updater">
+    <rows update_ui="true">
+    
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1700097084"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails setup</div>
+                <div class="yahooSearchItemSummary">was largely a Java gathering Then something happened as Jim started to show the rest of the group what Rails could do Mark Windholtz summarized it on their mailing list We watched a 10 min Rails video  It blew us away how easy it was to build a minimal web app in 10 minutes After the video Bill announced that he had a Rails server installed and running Gerard</div>
+
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://weblog.rubyonrails.org/</div>
+                <div class="yahooSearchItemDimensions">1024x768 - 569 sec - 22.6MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-b1.yimg.com/image/1612116111"></img></td>
+            <td>
+
+                <div class="yahooSearchItemTitle">What is Ruby on Rails?</div>
+                <div class="yahooSearchItemSummary">Robby Russell writes  ONLamp.com has published another article by Curt Hibbs titled, 'What is Ruby on Rails?.' In this article, Curt goes on to discuss all the major components of the popular Rails web framework and shows it does a lot of the heavy lifting for you. This article highlights all the major features, from Active Record to Web Services, which are going to be included in the upcoming</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://rss.slashdot.org/Slashdot/slashdot?m=1181</div>
+                <div class="yahooSearchItemDimensions">970x754 - 971 sec - 51.8MB</div>
+            </td>
+        </tr>
+
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-b1.yimg.com/image/1612265036"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">Jason Huggins: A Rails-like App in Python with CherryPy</div>
+                <div class="yahooSearchItemSummary">In many discussions about  #8220;what does Ruby on Rails got that the Python community doesn #8217;t got? #8221;, a growing consensus is that a combination of CherryPy (controller), SQLObject (model), and Cheetah (view/templating) is part of the answer. In fact, a developer from the CherryPy project has started Subway , a Rails clone, using those three packages. Subway hasn #8217;t made an official release yet, and I #8217;m impatient, so I was curious how far I could get with just those three packages alone. Cool Rails Feature #1: Directory Structure While viewing the CherryPy tutorials , I noticed one called  #8220; bonus-sqlobject.py  #8220;. It looks like it has all three pieces of the holy MVC trinity there in one file. I really like the way Rails enforces a solid directory structure on your application, so I went about breaking out bonus-sqlobject.py into a Rails-like folder structure. This was easy to do. ( screenshot ) So-so Rails Feature #2: Scaffolding Like everyone else on the planet, I watched the famous 10 minute setup movie and marveled at how database schema changes automatically were reflected in the GUI with a simple browser page refresh. That magic is partly provided by the scaffolding code and generator scripts. The scaffolding code is a surprising  #8220;hook #8221; to pique your interest, but I #8217;m not really interested in that. It #8217;s not interesting because very quickly on, you #8217;ll want to and need to replace the scaffolding with your own controller and view code. The rails guys have been saying the same thing for a while. Cool Rails Feature #3: SQL Table Introspection to Define Model The other piece of magic in the 10 minute setup movie was the SQL introspection in ActiveRecord. It lets you make a change in the database and see those changes instantly reflected in your model #8217;s definition. SQLObject lets you do the same thing. So I modified CherryPy #8217;s SQLObject tutorial to use the database schema to define its structure. class Contact(SQLObject): _fromDatabase = True That looks pretty  #8220;Rail-ish #8221; to me. Cool Rails Feature #4: No  #8220;XML sit-ups #8221; This one must be important, since it is mentioned in bold at the top of the Ruby on Rails site. I have experienced the pain of  #8220;XML sit-ups #8221; first hand. Trying to figure out APE #8217;s XML configuration for database mappers and gateways is not easy.  #8216;Tis a very un-pythonic experience. I fear the Zope 3 and its ZCML is on its way to XML sit-up infamy, as well. However, I think CherryPy has Rails beat on this one #8230; A separate configuration file is totally optional . Sane defaults are stored as a dictionary data structure, but are easy to over-ride either programmatically or with your own configuration file. Cool Rails Feature #5: Easy Install Like everyone else in the known universe, after I watched the 10 minute movie, I followed along with O #8217;Reilly #8217;s  #8220; Rolling with Ruby on Rails  #8221; tutorial. It really was as easy as 1-2-3 #8230; (Assuming that the MySQL install was step zero) . 1) Install Ruby via  #8220;one-click #8221; self-installer. 2) Install Gems via  #8220;one-click #8221; self-installer. 3) c:  gem install rails  #8211;remote Python has a  #8220;one-click #8221; installer for the Python language distribution, but everything else took a little more work to get setup. I have hope that Eggs , easy_install , and PyPI will become as useful and productive as Perl #8217;s CPAN and Ruby #8217;s GEMs. But until then, Rails has CherryPy beat on ease-of-install. Here #8217;s what I installed for my CherryPy app: (most hyperlinks link to .exe installers or tarballs) 1) MySQL 4.1.12 2) MySQL-Front 3.2 3) Python 2.4.1 4) MySQLdb 1.0.0 (driver) * 5) SQLObject 0.6.1 6) Cheetah 0.9.17 7) CherryPy 2.1 ** Steps 4 through 7 will someday be replaced by: a) install easy_install b) c:\easy_install subway * I had problems with MySQLdb 1.2.0 on Python 2.4 and SQLObject #8211; saves weren #8217;t getting committed to the database. I downgraded to MySQLdb 1.0.0 and things started working again. So I figured out how to avoid the problem, but I don #8217;t know what caused the problem. ** CherryPy 2.1 is currently only available from /trunk in the subversion repository. I #8217;ll explain below why I took a snapshot of their code instead of an official release. Cool Rails Feature #6: Live Auto-Reload This is the *real* secret sauce. Most dynamic languages do not require a compilation step before you can execute your code. This gives the developer a good boost in productivity compared to languages that do require compiling and linking (C, C++, Java, and C#). However, when you #8217;re making rapid changes to code to web apps in Python, you often have to stop and restart your web server to pick up the new changes you made. I have to do this all the time in Plone, and it #8217;s annoying. Yet another cool feature demo #8217;d in Rails #8217; Academy Award winning 10 minute setup movie is the ability to make  #8220;live #8221; code changes in your running application. Make a change in your code, then click refresh in your browser, and boom #8211; instant gratification. CherryPy 2.1 will provide this same live auto-reload feature by default when it #8217;s released this summer. The code is already available in the subversion repository, and a recipe was posted to the project wiki on how to use the feature. Since CherryPy 2.1 is still unreleased but available as the /trunk branch in the project #8217;s repository, I fired up my svn client and ran the command: c:/temp/cherrypy21  svn export http://svn.cherrypy.org/trunk At the time, I picked up revision #386. I implemented the auto-reload recipe for my CherryPy application without much effort. It #8217;ll be nice when this is done for me in the official release, but it wasn #8217;t hard to do myself. And now that I #8217;ve done it, you can just copy my example. Summary: Rails has the lead, for now #8230; But I #8217;m not jumping ship from Python, yet. Ruby on Rails has more finish and polish, but I think I am starting to find proof to refute the claims that  #8220;this wouldn #8217;t even be possible without using ruby on rails #8221;. Most of the Rails innovations (packaging, simplicity, and dynamicity) can be implemented in Python without much extra effort. I eagerly look forward to CherryPy 2.1 #8217;s release, but oddly, I #8217;m not really feeling the anticipation for whatever is coming from Subway #8230; It looks like Subway is focused on scaffolding code and Paste integration. I would prefer to see a focus on ease of installation and fancy earth-shatteringly beautiful 10 minute setup movies, instead. (And I will sheepishly admit, I still don #8217;t  #8220;get #8221; Paste. Sorry, Ian.) In the future, my version of scaffolding would simply be a search-and-replace job in all the text files in my CherryPy app. Files used contact.zip 18.6KB Screenshots   /  1) Directory structure 2) Welcome Page 3) Contact - Index 4) Contact - Edit 5) HelloWorld Form 6) HelloWorld Result Recent .mov files found by Blogdigger</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.jrandolph.com/blog/?p=6</div>
+
+                <div class="yahooSearchItemDimensions">1024x768 - 569 sec - 22.6MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1794170720"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails l</div>
+                <div class="yahooSearchItemSummary">Rails to Trails QuickTime Large QuickTime Small</div>
+
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.seidlerproductions.com/products/community_enhance/rails.html</div>
+                <div class="yahooSearchItemDimensions">320x240 - 88 sec - 4.2MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-b1.yimg.com/image/1612884519"></img></td>
+            <td>
+
+                <div class="yahooSearchItemTitle">Rails</div>
+                <div class="yahooSearchItemSummary">Rails is that Ruby thing-a-ma-jig that uses the Ajax something-or-other to do wondrous lickable DHTML stuff. Resources: Installing Ruby on Rails with lighttpd and mySQL on Fedora Core 4. RSS Digest Ruby News Dashboard upload progress (cool movie ) mir.aculo.us Effects demo Prototype Technorati Tags: ruby , ajax , dhtml , rails , lighttpd , mysql , fedora Recent .mov files found by Blogdigger</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://the.taoofmac.com/space/Rails</div>
+                <div class="yahooSearchItemDimensions">785x509 - 215 sec - 4.4MB</div>
+            </td>
+        </tr>
+
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1794363743"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails sm</div>
+                <div class="yahooSearchItemSummary">Rails to Trails QuickTime Large QuickTime Small Windows Media Large</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.seidlerproductions.com/products/community_enhance/rails.html</div>
+
+                <div class="yahooSearchItemDimensions">160x120 - 88 sec - 1.5MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1700010559"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">10offtherailsCalendarGirls</div>
+                <div class="yahooSearchItemSummary">on you 7 And finallythe golden rule for shopaholics dont buy bargains unless you have clothes to match! Video Clip  View the streaming video for the Calendar Girls story</div>
+
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.rte.ie/tv/offtherails/series4/Prog10/10featcalendargirls.html</div>
+                <div class="yahooSearchItemDimensions">320x240 - 1679 sec - 0.0MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1793263484"></img></td>
+            <td>
+
+                <div class="yahooSearchItemTitle">8 RAILS</div>
+                <div class="yahooSearchItemSummary">Parent Directory 16Nov2004 1623  8RAILSswf 30Jun2004 1529 17k 8RailsTransitDate 30Jun2004 1529 17k</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.cotafasttrax.com/swf</div>
+                <div class="yahooSearchItemDimensions">235x230 -  sec - 0.0MB</div>
+            </td>
+        </tr>
+
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1793712656"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">Crew Green Rails NJ Over</div>
+                <div class="yahooSearchItemSummary">SKATE </div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://er.zeegisbreathing.com/videos/view-video.cgi?/videos/Crew-Green_Rails-NJ-Over.mov</div>
+
+                <div class="yahooSearchItemDimensions">320x240 - 69 sec - 5.5MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1794360814"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails l</div>
+                <div class="yahooSearchItemSummary">QuickTime Large QuickTime Small Windows Media Large Windows Media Small</div>
+
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.seidlerproductions.com/products/community_enhance/rails.html</div>
+                <div class="yahooSearchItemDimensions">320x240 - 89 sec - 6.7MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1792023108"></img></td>
+            <td>
+
+                <div class="yahooSearchItemTitle">rails mitchell 56</div>
+                <div class="yahooSearchItemSummary">288  56k Mitchells memories of riding the rails as a 16yearold are bittersweet Mitchell was one of perhaps a quartermillion teenagers who hopped freight trains at</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.albany.edu/jmmh/vol2no1/ridingrails.html</div>
+                <div class="yahooSearchItemDimensions">160x112 - 59 sec - 0.0MB</div>
+            </td>
+        </tr>
+
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1792425101"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">dylan two rails</div>
+                <div class="yahooSearchItemSummary">First Chad then Dylan then Jim all go over a very cool tree slide Dylan failing to do a handstand out of sheer wussiness Dylan going over two rails and trying to look cool Jim making nice turns through good snow</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.spurgin.net/</div>
+
+                <div class="yahooSearchItemDimensions">320x240 - 12 sec - 0.9MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1791856745"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails mitchell</div>
+                <div class="yahooSearchItemSummary">288  56k Mitchells memories of riding the rails as a 16yearold are bittersweet Mitchell was one of perhaps a quartermillion teenagers who hopped freight</div>
+
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.albany.edu/jmmh/vol2no1/ridingrails.html</div>
+                <div class="yahooSearchItemDimensions">128x96 - 58 sec - 0.0MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1794359913"></img></td>
+            <td>
+
+                <div class="yahooSearchItemTitle">rails</div>
+                <div class="yahooSearchItemSummary">QuickTime Small Windows Media Large Windows Media Small</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.seidlerproductions.com/products/community_enhance/rails.html</div>
+                <div class="yahooSearchItemDimensions">192x144 - 89 sec - 1.3MB</div>
+            </td>
+        </tr>
+
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1793379146"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">autmnlo</div>
+                <div class="yahooSearchItemSummary">Autumn Rails 10 low res 496 MB</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.dmxconsulting.com/</div>
+
+                <div class="yahooSearchItemDimensions">240x160 - 333 sec - 5.0MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1702539851"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails thru time 2</div>
+                <div class="yahooSearchItemSummary"></div>
+
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.thebackroads.com/page4.html</div>
+                <div class="yahooSearchItemDimensions">352x240 - 220 sec - 16.3MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1702549940"></img></td>
+            <td>
+
+                <div class="yahooSearchItemTitle">rails thru time 1</div>
+                <div class="yahooSearchItemSummary"></div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.thebackroads.com/page4.html</div>
+                <div class="yahooSearchItemDimensions">352x240 - 217 sec - 16.1MB</div>
+            </td>
+        </tr>
+
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1702833180"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">Kristen and Scooter beg  Hunter  x rails  to Left</div>
+                <div class="yahooSearchItemSummary"></div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://valleyviewranch.net/cross-rails.htm</div>
+                <div class="yahooSearchItemDimensions">320x240 - 81 sec - 23.3MB</div>
+
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1702833091"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails</div>
+                <div class="yahooSearchItemSummary">Kürbisse fahren auch Rails  Quicktime09MB Real226KB Dr Holzmichel </div>
+                <div class="yahooSearchItemReferrer">
+
+                	<a href="result.RefererUrl%>"></a>http://projektwochen.de/ladurns/la_filme.html</div>
+                <div class="yahooSearchItemDimensions">176x132 - 50 sec - 0.9MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1791856906"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails hobojungles</div>
+
+                <div class="yahooSearchItemSummary">288  56k Those who found steady work abandoned the trains Mitchell and many other young men got jobs with the CCC Most teens returned home and for some</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.albany.edu/jmmh/vol2no1/ridingrails.html</div>
+                <div class="yahooSearchItemDimensions">128x96 - 72 sec - 0.0MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1791856364"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails lonely</div>
+                <div class="yahooSearchItemSummary">288  56k from Louisiana remembers being saved by a train conductor who put him off the train after hearing that officials in the next town were looking for a rape suspect</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.albany.edu/jmmh/vol2no1/ridingrails.html</div>
+                <div class="yahooSearchItemDimensions">128x96 - 71 sec - 0.0MB</div>
+
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1792022194"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails hungry 56</div>
+                <div class="yahooSearchItemSummary">288  56k For even the most adventurous teen it was not long before wanderlust and the romanticism of the train whistle and the clickety</div>
+                <div class="yahooSearchItemReferrer">
+
+                	<a href="result.RefererUrl%>"></a>http://www.albany.edu/jmmh/vol2no1/ridingrails.html</div>
+                <div class="yahooSearchItemDimensions">160x112 - 55 sec - 0.0MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1794031226"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">297105</div>
+
+                <div class="yahooSearchItemSummary">Peoples Photography 2004  videoxmswmv 58M Going off the Rails  videoxmswmv 31M 2 Videos</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.indymedia.org.uk/en/2004/08/297103.html</div>
+                <div class="yahooSearchItemDimensions">160x112 - 436 sec - 3.1MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1700252158"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">kev rails</div>
+                <div class="yahooSearchItemSummary"></div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.maths.tcd.ie/~moroneyk/trip/index2.html</div>
+                <div class="yahooSearchItemDimensions">640x480 - 27 sec - 1.9MB</div>
+
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1700019600"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">040302 mcbride</div>
+                <div class="yahooSearchItemSummary">Originally Broadcast March 2 2004  Watch the story Real Media</div>
+                <div class="yahooSearchItemReferrer">
+
+                	<a href="result.RefererUrl%>"></a>http://www.cbc.ca/disclosure/archives/040302_mcbride/main.html</div>
+                <div class="yahooSearchItemDimensions">240x180 - 813 sec - 0.0MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1703048152"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails</div>
+
+                <div class="yahooSearchItemSummary">Kürbisse fahren auch Rails  Quicktime09MB Real226KB Dr Holzmichel  Quicktime06MB</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://projektwochen.de/ladurns/la_filme.html</div>
+                <div class="yahooSearchItemDimensions">240x176 - 50 sec - 0.2MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1702049388"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">Jamie Cameron Rails 04 1</div>
+                <div class="yahooSearchItemSummary"></div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.britishfreeskicamps.com/british-freeski-camps/action/videos_04/Jamie-Cameron_Rails_1.htm</div>
+                <div class="yahooSearchItemDimensions">320x240 - 2 sec - 0.1MB</div>
+
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1701229572"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">oitrains</div>
+                <div class="yahooSearchItemSummary">out of a wilderness Today many of the smaller routes have been vacated by the railroads but inventive Idahoans find new ways to enjoy them from modern rail bikes to model trains Riding the Rails Promo Length 40 minutes Price 1995</div>
+                <div class="yahooSearchItemReferrer">
+
+                	<a href="result.RefererUrl%>"></a>http://idptv.state.id.us/shop/video/issues.html</div>
+                <div class="yahooSearchItemDimensions">240x180 - 31 sec - 0.0MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1792022204"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails danger 56</div>
+
+                <div class="yahooSearchItemSummary">288  56k Once on a boxcar many teens headed to port cities in search of adventure and jobs But jobs in the cities were few and most ended</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.albany.edu/jmmh/vol2no1/ridingrails.html</div>
+                <div class="yahooSearchItemDimensions">160x112 - 49 sec - 0.0MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1793886403"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">offrails</div>
+                <div class="yahooSearchItemSummary">die zweite Ausgabe des Red Bull Off Rails stattfinden sollte ist man sich jetzt sicher Es gibt einfach keine bessere Location um Rails zu bezwingen als den alten Park im 20 Bezirk in Wien  watch Video 16 geladene Boarder aus zehn Nationen unter ihnen die finnischen Eeros Ettala und Niemelä die russische Railmaschine Dimitri Fesenko oder der französische Mastermind</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.snowboard.at/news_stories/news2004/redbull_rail.php</div>
+                <div class="yahooSearchItemDimensions">176x128 - 47 sec - 1.6MB</div>
+
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1702672874"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">Blade BothRails</div>
+                <div class="yahooSearchItemSummary">Shuttle Simulation Video Blade Shuttle both rails 668 KB Blade Shuttle one rail 606 KB</div>
+                <div class="yahooSearchItemReferrer">
+
+                	<a href="result.RefererUrl%>"></a>http://vtb.ee.sc.edu/applications/emals/index4.asp</div>
+                <div class="yahooSearchItemDimensions">320x240 - 6 sec - 0.7MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1702417480"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">abcdcc</div>
+
+                <div class="yahooSearchItemSummary">Video 1 Cody Carter Download Rails and rails</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.biglines.com/</div>
+                <div class="yahooSearchItemDimensions">320x240 - 24 sec - 1.4MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1793204857"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails new</div>
+                <div class="yahooSearchItemSummary">31Dec03 1725 1M</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.indianrailways.gov.in/railway/images/fls</div>
+                <div class="yahooSearchItemDimensions">210x100 -  sec - 0.1MB</div>
+
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1791952395"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">rails portoghese</div>
+                <div class="yahooSearchItemSummary"></div>
+                <div class="yahooSearchItemReferrer">
+
+                	<a href="result.RefererUrl%>"></a>http://www.motociclisti-incolumi.com/download.htm</div>
+                <div class="yahooSearchItemDimensions">352x288 - 32 sec - 3.4MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1794601238"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">RichyCarrascoFlatlandTrickMontage</div>
+
+                <div class="yahooSearchItemSummary"></div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.sk8kings.com/new/video/RichyCarrascoFlatlandTrickMontage.htm</div>
+                <div class="yahooSearchItemDimensions">240x180 - 53 sec - 3.1MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1700630890"></img></td>
+
+            <td>
+                <div class="yahooSearchItemTitle">railsrace</div>
+                <div class="yahooSearchItemSummary">2 Sand Rails racing 33MB Thanksgiving 2001 Gordons Wells Sand Drags</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.sandbros.com/videos/videos.htm</div>
+                <div class="yahooSearchItemDimensions">320x240 - 11 sec - 3.4MB</div>
+            </td>
+
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1794180185"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">Rails</div>
+                <div class="yahooSearchItemSummary"></div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://wegenernet.de/fun</div>
+
+                <div class="yahooSearchItemDimensions">160x120 - 55 sec - 3.1MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1700881492"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">CollapsibleRails</div>
+                <div class="yahooSearchItemSummary"></div>
+
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://custom.lpi-inc.com/collapsible-rails.html</div>
+                <div class="yahooSearchItemDimensions">320x240 - 31 sec - 0.4MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1700016054"></img></td>
+            <td>
+
+                <div class="yahooSearchItemTitle">11042002 govrace</div>
+                <div class="yahooSearchItemSummary">polls Tuesday In the race for governor Republican John Rowland was shaking hands on the tracks while Democrat Bill Curry was looking for help from former president Bill Clinton  Watch our team coverage</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.wtnh.com/Global/category.asp?C=33810</div>
+                <div class="yahooSearchItemDimensions">240x180 - 207 sec - 0.0MB</div>
+            </td>
+        </tr>
+
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1701638892"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">mthrrc mov</div>
+                <div class="yahooSearchItemSummary">this hobby has to be expensive!! As you can see in the following clip its a smart running smart sounding locomotive MTH Rugged Rails MTHRRC Consolidation Real Media  video MTH Rugged Rails MTHRRC Consolidation Windows Media  video</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.toytrains1.com/multimedia.htm</div>
+
+                <div class="yahooSearchItemDimensions">320x240 - 14 sec - 0.7MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1700986173"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">mike aotoporn goose</div>
+                <div class="yahooSearchItemSummary">BS full torque to tts  The Heights 2 Tricks at Vic West Skatepark AO Toporn  Goose Rails</div>
+
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.sr-inline.com/videoclips.htm</div>
+                <div class="yahooSearchItemDimensions">320x240 - 11 sec - 1.5MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1701169603"></img></td>
+            <td>
+
+                <div class="yahooSearchItemTitle">City320x240</div>
+                <div class="yahooSearchItemSummary">AVI 320 x 240 14M Two steamers passing at the city station AVI 160 x 120 11M AVI 320 x 240 335M</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.seancostella.com/NVRR/RideTheRails.htm</div>
+                <div class="yahooSearchItemDimensions">320x240 - 91 sec - 32.8MB</div>
+            </td>
+        </tr>
+
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1701336056"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">ian aosoul</div>
+                <div class="yahooSearchItemSummary">BS full torque  The Heights Alley Oop Soul  Med Rails Sweaty  Med Rails</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.sr-inline.com/videoclips.htm</div>
+
+                <div class="yahooSearchItemDimensions">320x240 - 8 sec - 0.2MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1791926537"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">LidoRail</div>
+                <div class="yahooSearchItemSummary">Lido Rails Luxfer</div>
+
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.themediastaff.com/newhtml/videogallery.htm</div>
+                <div class="yahooSearchItemDimensions">320x240 - 8 sec - 1.1MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1700988354"></img></td>
+            <td>
+
+                <div class="yahooSearchItemTitle">ian sweaty</div>
+                <div class="yahooSearchItemSummary">BS full torque  The Heights Alley Oop Soul  Med Rails Sweaty  Med Rails</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.sr-inline.com/videoclips.htm</div>
+                <div class="yahooSearchItemDimensions">320x240 - 7 sec - 0.2MB</div>
+            </td>
+        </tr>
+
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1792657023"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">planes</div>
+                <div class="yahooSearchItemSummary"> The denizens of the shrine areambiguously Arabic people  Horribly stereotyped in the inimitable Japanese fashion 1  They wield swords suicide bomb speak gibberish and have planes on rails on the ceiling These planes kind of roll by shooting down at you Then they crash into a wall instantly killing the passenger Itsa little damaging to my ethical</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.insertcredit.com/reviews/ms3</div>
+
+                <div class="yahooSearchItemDimensions">304x224 - 8 sec - 0.7MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1792642254"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">NickSouthwellRails</div>
+                <div class="yahooSearchItemSummary">Andy Robinson  Spine Nick Southwell  Rails Nick Southwell  Spine</div>
+
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.ifyouski.com/news/newsarticle?ObjectID=5041515</div>
+                <div class="yahooSearchItemDimensions">320x240 - 2 sec - 0.1MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1700987123"></img></td>
+            <td>
+
+                <div class="yahooSearchItemTitle">ray mizou highway</div>
+                <div class="yahooSearchItemSummary">Zero kindgrind  Highway Rails Mizou  Highway Rails Hurts himself worse than you</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.sr-inline.com/videoclips.htm</div>
+                <div class="yahooSearchItemDimensions">320x240 - 6 sec - 0.9MB</div>
+            </td>
+        </tr>
+
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1701337702"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">ray 0kindgrind highway</div>
+                <div class="yahooSearchItemSummary">Zero kindgrind  Highway Rails Mizou  Highway Rails</div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.sr-inline.com/videoclips.htm</div>
+
+                <div class="yahooSearchItemDimensions">320x240 - 6 sec - 0.8MB</div>
+            </td>
+        </tr>
+      
+        <tr>
+            <td><img height="50" src="http://scd.mm-so.yimg.com/image/1794031225"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle">297104</div>
+                <div class="yahooSearchItemSummary">Peoples Photography 2004  videoxmswmv 58M Going off the Rails  videoxmswmv 31M</div>
+
+                <div class="yahooSearchItemReferrer">
+                	<a href="result.RefererUrl%>"></a>http://www.indymedia.org.uk/en/2004/08/297103.html</div>
+                <div class="yahooSearchItemDimensions">160x112 - 822 sec - 5.8MB</div>
+            </td>
+        </tr>
+      
+    </rows>
+  </response>
+
+  <response type="element" id="videoResultStats">
+    <span>&#160;of about 330 for rails</span>
+  </response>
+  <response type="object" id="configureImageSearchRows">
+    <numResults>50</numResults>
+  </response>
+</ajax-response>
+

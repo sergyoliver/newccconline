@@ -1,0 +1,26 @@
+<ajax-response>
+  <response type="object" id="videoSearchResultsGrid_updater">
+    <rows update_ui="true">
+    <% i = 0; 
+      @yahoo.each(:Result) do |result| %>
+        <tr>
+            <td><img height="50" src="<%=result.Thumbnail.Url%>"></img></td>
+            <td>
+                <div class="yahooSearchItemTitle"><%=result.Title%></div>
+                <div class="yahooSearchItemSummary"><%=result.Summary%></div>
+                <div class="yahooSearchItemReferrer">
+                	<a href="<%=result.RefererUrl%>"></a><%=result.RefererUrl%></div>
+                <div class="yahooSearchItemDimensions"><%=result.Width%>x<%=result.Height%> - <%=result.Duration%> sec - <%=sprintf("%1.1f", (result.FileSize.to_f / 1024) / 1024)%>MB</div>
+            </td>
+        </tr>
+      <% end %>
+    </rows>
+  </response>
+
+  <response type="element" id="videoResultStats">
+    <span>&#160;of about <%= @yahoo.totalResultsAvailable%> for <%=@params[:query]%></span>
+  </response>
+  <response type="object" id="configureImageSearchRows">
+    <numResults><%=[@yahoo.totalResultsAvailable.to_i, 1000].min%></numResults>
+  </response>
+</ajax-response>

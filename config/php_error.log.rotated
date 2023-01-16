@@ -1,0 +1,12 @@
+[11-Nov-2022 16:32:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\INETPUB\VHOSTS\comptagecafecacao.com\httpdocs\connexion\connectpg.php:27
+Stack trace:
+#0 {main}
+  thrown in D:\INETPUB\VHOSTS\comptagecafecacao.com\httpdocs\connexion\connectpg.php on line 27
+[11-Nov-2022 16:32:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\INETPUB\VHOSTS\comptagecafecacao.com\httpdocs\connexion\connectpg.php:27
+Stack trace:
+#0 {main}
+  thrown in D:\INETPUB\VHOSTS\comptagecafecacao.com\httpdocs\connexion\connectpg.php on line 27
+[11-Nov-2022 16:32:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in D:\INETPUB\VHOSTS\comptagecafecacao.com\httpdocs\connexion\connectpg.php:27
+Stack trace:
+#0 {main}
+  thrown in D:\INETPUB\VHOSTS\comptagecafecacao.com\httpdocs\connexion\connectpg.php on line 27

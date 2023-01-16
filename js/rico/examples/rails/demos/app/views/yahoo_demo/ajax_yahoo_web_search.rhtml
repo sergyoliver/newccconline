@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<ajax-response>
+  <response type="object" id="webSearchResultsGrid_updater">
+    <rows update_ui="true" >
+      <% i = 0; 
+        @yahoo.each(:Result) do |result| %>
+        <tr>
+            <td>
+               <span class="webSearchIndex"><%=@params[:offset].to_i + (i+=1)%>.</span>
+            </td>
+            <td>
+               <a class="webSearchTitle" href="<%=result.ClickUrl%>">
+                  <%=result.Title%>
+               </a>
+                <div class="yahooSearchItemSummary">
+                   <%=result.Summary == nil ? "" : result.Summary.to_s[0..200]%>
+                </div>
+                <div class="webSearchUrl"><%=result.Url%> -
+                   <span class="webSearchFileFormat">
+                      <%=result.MimeType%>
+                   </span>
+                </div>
+            </td>
+        </tr>
+    <% end %>
+    </rows>
+  </response>
+    <response type="element" id="webResultStats">
+      <span>&#160;of about <%= @yahoo.totalResultsAvailable%> for <%=@params[:query]%></span>
+    </response>
+    <response type="object" id="configureWebSearchRows">
+      <numResults><%=[@yahoo.totalResultsAvailable.to_i, 1000].min%></numResults>
+    </response>
+
+</ajax-response>
+

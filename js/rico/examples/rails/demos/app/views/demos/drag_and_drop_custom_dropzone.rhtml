@@ -1,0 +1,187 @@
+
+<%= javascript_include_tag  "ricoDragAndDropCustomDropzone",      
+                            "ricoDragAndDropCustomDraggable"%>
+<span class="header">CUSTOM DROPZONE EXAMPLE&nbsp;</span>
+
+<br/><br/>
+<div id="exampleContainer" style="background-color:#E0DDB5">
+
+<table cellspacing="5"><tr>
+
+<td valign="top">
+   <span class="catHeader" style="margin-top:0px">name-list</span>
+   <div class="listBox" id="nameList" style="background-color:white;width:250px;height:180px;overflow:auto">
+      <script>writeNameSpans()</script>
+   </div>
+   <script>createDraggables()</script>
+</td>
+
+<td>
+   <span class="catHeader" style="margin-top:0px">the custom drop zone</span>
+   <div style="padding:2px 7px;font-family:Arial;font-size:14px;border:1px solid #6b6b6b;background-color:white;height:180px;overflow:auto">
+      This example illustrates a custom draggable overriding the generic Rico.Draggable.
+      The overrides are explained below:
+
+      <br/><br/>
+      <b>activate/deactivate:</b></br>
+      When an object is being dragged that is "acceptable" to the custom drop zone,
+      it slightly changes it's opacity to indicatae that it can be dropped into. (uses Effect.FadeTo)
+
+      <br/><br/>
+      <b>showHover/hideHover:</b><br/>
+      When an object is over the active drop zone, the opacity is changed such that
+      it approaches it's non-opaque value. (uses Effect.FadeTo)
+
+      <br/><br/>
+      <b>canAccept:</b><br/>
+      The drop zone only accepts draggable's in a given alphabetic range. (half way
+      between the "activate" opacity and non-opaque.
+
+      <br/><br/>
+      <b>accept:</b><br/>
+      The drop zone accepts the draggables by inserting them in sorted order.
+   </div>
+</td>
+
+</tr></table>
+</div>
+
+<table cellspacing="3" cellpadding="3"><tr>
+
+   <td>
+      <span id="dz1" style="padding:2px 0px" class="catHeader">a-g</span>
+      <div style="width:200px" class="roundMe" >
+         <div id="dropZone1" style="height:100px;overflow:auto" class="customDropZone">
+         </div>
+      </div>
+   </td>
+
+   <td>
+      <span id="dz2"  style="padding:2px 0px" class="catHeader">h-m</span>
+      <div style="width:200px" class="roundMe" >
+         <div id="dropZone2" style="height:100px;overflow:auto" class="customDropZone">
+         </div>
+      </div>
+   </td>
+
+   <td>
+      <span id="dz3"  style="padding:2px 0px" class="catHeader">n-z</span>
+      <div style="width:200px" class="roundMe" >
+         <div id="dropZone3" style="height:100px;overflow:auto" class="customDropZone">
+         </div>
+      </div>
+   </td>
+
+</tr></table>
+
+
+<span class="catHeader">the code</span>
+<div class="rc codeBox" id="codeContainer">
+<div class="codeBox" style="height:300px;overflow:auto">
+<pre><span class="code"><!-- var CustomDropzone = Class.create();
+
+CustomDropzone.prototype = (new Rico.Dropzone()).extend( {
+
+   <b>initialize:</b> function( htmlElement, header, acceptRange ) {
+      this.htmlElement  = $(htmlElement);
+      this.header       = $(header);
+      this.absoluteRect = null;
+      this.from = acceptRange[0];
+      this.to   = acceptRange[1];
+      this.acceptedObjects = [];
+
+      this.offset = navigator.userAgent.toLowerCase().indexOf("msie") >= 0 ? 0 : 1;
+   },
+
+   <b>activate:</b> function() {
+      new Effect.FadeTo( this.htmlElement, .4, 250, 4 );
+   },
+
+   <b>deactivate:</b> function() {
+      new Effect.FadeTo( this.htmlElement, 1, 250, 4 );
+   },
+
+   <b>showHover:</b> function() {
+      if ( this.showingHover )
+         return;
+      this.header.style.color = "#000000";
+      new Effect.FadeTo( this.htmlElement, .7, 250, 4 );
+      this.showingHover = true;
+   },
+
+   <b>hideHover:</b> function() {
+      if ( !this.showingHover )
+         return;
+      this.header.style.color = "#5b5b5b";
+      new Effect.FadeTo( this.htmlElement, .4, 250, 4 );
+      this.showingHover = false;
+   },
+
+   <b>accept:</b> function(draggableObjects) {
+
+      n = draggableObjects.length;
+      for ( var i = 0 ; i < n ; i++ )
+         this._insertSorted(draggableObjects[i]);
+   },
+
+   <b>canAccept:</b> function(draggableObjects) {
+      for ( var i = 0 ; i < draggableObjects.length ; i++ ) {
+         if ( draggableObjects[i].type != "Custom" )
+            return false;
+         var firstChar = draggableObjects[i].name.substring(0,1).toLowerCase();
+         if ( firstChar < this.from || firstChar > this.to )
+            return false;
+      }
+
+      return true;
+   },
+
+   // -----------------------------------------------------------
+   // implementation specific methods... not part of the
+   // draggable contract
+   // -----------------------------------------------------------
+
+   <b>_insertSorted:</b> function( aDraggable ) {
+      var theGUI = aDraggable.getDroppedGUI();
+      var thisName = aDraggable.name;
+      var position = this._getInsertPosition(aDraggable);
+      if ( position == "append" )
+         this.htmlElement.appendChild(theGUI);
+      else
+         this.htmlElement.insertBefore( theGUI, this.htmlElement.childNodes[position+this.offset]  );
+      this.acceptedObjects[ this.acceptedObjects.length ] = aDraggable.name;
+      this.acceptedObjects.sort();
+   },
+
+   <b>_getInsertPosition:</b> function(aDraggable) {
+      for( var i = 0 ; i < this.acceptedObjects.length ; i++ )
+         if ( aDraggable.name < this.acceptedObjects[i] ) {
+            return i;
+         }
+       return "append";
+   }
+
+} ); --></span></pre>
+</div>
+</div>
+
+
+<div class="logBox" id="logger" style="display:none">
+</div>
+
+</body>
+
+<script>
+   dndMgr.registerDropZone( new CustomDropzone('dropZone1', 'dz1', ['a','g']) );
+   dndMgr.registerDropZone( new CustomDropzone('dropZone2', 'dz2', ['h','m']) );
+   dndMgr.registerDropZone( new CustomDropzone('dropZone3', 'dz3', ['n','z']) );
+
+   Rico.Corner.round('exampleContainer');
+   Rico.Corner.round('codeContainer');
+   $$('div.roundMe').each(function(e){Rico.Corner.round(e, {color:'#c6c3de'})})
+
+   CustomDraggable.removeOnDrop = true;
+   CustomDraggable.revereNamesOnDrop = false;
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+
+<span class="header">SIMPLE DRAG &amp; DROP EXAMPLE&nbsp;</span>
+
+<div style="padding:5px;border:1px solid #5b5b5b;height:50px">
+<div class="box" style="background:#f7a673" id="dragme">Drag Me</div>
+</div>
+
+<br/>
+
+<table style="margin-bottom:8px" cellspacing="3" cellpadding="3">
+<tr>
+   <td>
+      <div id="droponme" class="simpleDropPanel" style="background:#ffd773">
+         <div class="title">Drop On Me</div>
+      </div>
+    </td>
+
+    <td>
+      <div id="droponme2" class="simpleDropPanel" style="background:#c6c3de">
+         <div class="title">Drop On Me 2</div>
+      </div>
+	 </td>
+</tr>
+</table>
+
+<div id="explanation" class="explanation">
+   <pre>
+   &lt;div class="box" style="background:#f7a673" id="dragme"&gt;
+      Drag Me
+   &lt;/div&gt;
+
+   &lt;div style="margin-bottom:8px;"&gt;
+      &lt;div id="droponme" class="panel" style="display:inline;background:#ffd773"&gt;
+         &lt;div class="title">Drop On Me&lt;/div>
+      &lt;/div&gt;
+
+      &lt;span&gt;&nbsp;&lt;/span&gt;
+									
+      &lt;div id="droponme2" class="panel" style="display:inline;background:#c6c3de"&gt;
+         &lt;div class="title"&gt;Drop On Me 2&lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+
+   &lt;script&gt;
+      dndMgr.registerDraggable( new Rico.Draggable('test-rico-dnd','dragme') );
+      dndMgr.registerDropZone( new Rico.Dropzone('droponme') );
+      dndMgr.registerDropZone( new Rico.Dropzone('droponme2') );
+   &lt;/script&gt;</pre>
+</div>
+
+<script>
+   Rico.Corner.round('explanation');
+   dndMgr.registerDraggable( new Rico.Draggable('test-rico-dnd','dragme') );
+   dndMgr.registerDropZone( new Rico.Dropzone('droponme') );
+   dndMgr.registerDropZone( new Rico.Dropzone('droponme2') );
+</script>

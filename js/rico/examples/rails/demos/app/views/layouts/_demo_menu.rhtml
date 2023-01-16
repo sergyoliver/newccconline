@@ -1,0 +1,75 @@
+
+<!-- I did have this as float:right but it screws up in firefox -->
+<!-- <div style="margin-left:6px"><a id="demoPanelLink" href="javascript:toggleSlide();">Hide demo panel</a></div> -->
+
+<span> <h2> Download Rico 2.0 for more demos. </h2></span>
+<div id="demosMenu" ondblclick="toggleSlide()" style="margin-left:2px;margin-top:2px;padding-left:6px;background-color:#adba8c;width:575px">
+<table cellpadding="0" style="margin-top:6px;margin-bottom:6px"><tr>
+
+<td class="portalBox" id="ajaxDemos">
+
+<div class="leftPadding">
+<span  class="header">AJAX DEMOS</span>
+<%=link_to "Inner Html", {:controller=>'ajax_demo', :action=>'inner_ajax_HTML'}, :class=>'demoLinks'%>
+<%=link_to "Javascript Updater", {:controller=>'ajax_demo', :action=>'complex_ajax'}, :class=>'demoLinks'%>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+</div>
+
+</td>
+<td>&nbsp;</td>
+<td class="portalBox" id="dragdropDemos">
+
+<div class="leftPadding">
+<span  class="header">DRAG &amp; DROP DEMOS</span>
+<%=link_to "Simple", {:controller=>'demos', :action=>'drag_and_drop_simple'}, :class=>'demoLinks'%>
+<%=link_to "Custom Draggable", {:controller=>'demos', :action=>'drag_and_drop_custom_draggable'}, :class=>'demoLinks'%>
+<%=link_to "Custom Drop Zone", {:controller=>'demos', :action=>'drag_and_drop_custom_dropzone'}, :class=>'demoLinks'%>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+</div>
+
+</td>
+
+<td>&nbsp;</td>
+<td class="portalBox" id="cinemaDemos">
+
+<div class="leftPadding">
+<span  class="header">CINEMATIC DEMOS</span>
+<%=link_to "Animate & Effects", {:controller=>'demos', :action=>'effect_animation'}, :class=>'demoLinks'%>
+<%=link_to "Pull Down", {:controller=>'demos', :action=>'pull_down'}, :class=>'demoLinks'%>
+<%=link_to "Round a Shape", {:controller=>'demos', :action=>'effect_round'}, :class=>'demoLinks'%>
+<%=link_to "Color Example", {:controller=>'demos', :action=>'color'}, :class=>'demoLinks'%>
+<%=link_to "Rounded&nbsp;Corner&nbsp;Examples", {:controller=>'demos', :action=>'corner'}, :class=>'demoLinks'%>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+</div>
+
+</td>
+
+<td>&nbsp;</td>
+<td class="portalBox" id="extraDemos">
+
+<div class="leftPadding">
+<span  class="header">BEHAVIOR DEMOS</span>
+<%=link_to "Accordion", {:controller=>'demos', :action=>'accordion'}, :class=>'demoLinks'%>
+<%=link_to "Weather Widget", {:controller=>'weather_demo'}, :class=>'demoLinks'%>
+<%=link_to "LiveGrid - Data Table", {:controller => 'livegrid_demo'}, :class=>'demoLinks'%>
+<!-- <%=link_to "LiveGrid - Search", {:controller => 'yahoo_demo'}, :class=>'demoLinks'%> -->
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+</div>
+
+</td>
+
+</tr>
+</table>
+
+</div>

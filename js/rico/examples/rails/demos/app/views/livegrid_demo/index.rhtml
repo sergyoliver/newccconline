@@ -1,0 +1,104 @@
+<%= javascript_include_tag  "ricoCommon", "ricoGridCommon", "ricoSimpleGrid", "ricoLiveGrid", "ricoLiveGridMenu", "ricoLiveGridAjax", "ricoLiveGridFilter" %>
+<%= stylesheet_link_tag "livegrid", :media =>'all' %>
+
+
+<%= javascript_tag %{
+    function updateHeader( liveGrid, offset ) {
+        try{
+       $('bookmark').innerHTML = 
+                    "Listing movies " + (offset+1) + " - " + (offset+liveGrid.metaData.getPageSize()) + " of " +  liveGrid.metaData.getTotalRows();
+       var sortInfo = "";
+       if (liveGrid.sortCol) {
+          sortInfo = "&data_grid_sort_col=" + liveGrid.sortCol + "&data_grid_sort_dir=" + liveGrid.sortDir;
+       }
+    	  $('bookmark').href="#{url_for}" + "?data_grid_index=" + offset + sortInfo;
+      }catch(e){}
+    }
+    
+      var opts = {
+            menuEvent: 'none',
+            canFilterDefault: false,
+            columnSpecs   : [,,,,,{type:'date'}],
+            headingRow: 1,
+            #{"offset:" + @params[:data_grid_index].to_s + ","   if @params[:data_grid_index]}
+            #{"sortCol:" + @params[:data_grid_sort_col].to_s + ","    if @params[:data_grid_sort_col]}
+            #{"sortDir:" + @params[:data_grid_sort_dir].to_s + ","   if @params[:data_grid_sort_dir]}
+            sortAscendImg:        'sort_asc.gif',
+            sortDescendImg:       'sort_desc.gif'
+      };
+      
+      var lastVal=[];
+
+      function keyfilter(txtbox,idx) {
+        if (typeof lastVal[idx] != 'string') lastVal[idx] = '';
+        if (lastVal[idx] == txtbox.value) return;
+        lastVal[idx] = txtbox.value;
+        if (txtbox.value == '')
+          movieTable.columns[idx].setUnfiltered();
+        else
+          movieTable.columns[idx].setFilter('LIKE', txtbox.value + '*', Rico.TableColumn.USERFILTER, function() {txtbox.value='';});
+      } 
+      
+      var movieTable = null;
+      var filter = null;
+}%>
+
+<%= javascript_on_load %{
+        var buffer = new Rico.Buffer.AjaxSQL('/livegrid_demo/ajax_livegrid_content', {TimeOut:60})
+        movieTable = new Rico.LiveGrid ('data_grid', new Rico.GridMenu({}), buffer, opts);
+        filter = new Rico.LiveGridFilter($$('.ricoLG_hdg')[3], movieTable);
+}%>
+
+
+<a id="bookmark" style="margin-bottom:3px;font-size:12px;">Listing movies</a>
+<div id="container" style="width:640px;" >
+    <span><a id='filterLink' href="#" onclick="filter.toggle()"><img src="/images/tableFilterCollapse.gif" border="0"></a></span>
+
+<table id="data_grid"  cellspacing="0" cellpadding="0" style="width:610px;">
+    <colgroup>
+    <col style='width:40px;' >
+    <col style='width:220px;' >
+    <col style='width:80px;' >
+    <col style='width:60px;'>
+    <col style='width:60px;' >
+    <col style='width:60px;' >
+    </colgroup>
+    <thead>
+  <tr id="data_grid_main">
+	  <th class="tableCellHeader" style="text-align:center">#</th>
+	  <th class="tableCellHeader">Title</th>
+	  <th class="tableCellHeader">Genre</th>
+	  <th class="tableCellHeader">Rating</th>
+	  <th class="tableCellHeader">Votes</th>
+	  <th class="tableCellHeader">Year</th>
+  </tr>
+  <tr id='filterBar' class='dataInput'>
+	  <th></th>
+	  <th><input type='text' onkeyup='keyfilter(this,1)' size='31'>
+	      <a href="#" onclick="inp = $(this.parentNode).down('input') ;inp.value = ''; keyfilter(inp,1)">
+	          <img src="/images/removeFilter.gif"></a></th>
+	  <th><a><input type='text' onkeyup='keyfilter(this,2)' size='7'>
+	      <a onclick="inp = $(this.parentNode).down('input'); inp.value = ''; keyfilter(inp,2)" href="#"><img src="/images/removeFilter.gif"></a></th>
+	  <th><input type='text' onkeyup='keyfilter(this,3)' size='5'>
+          <!-- <a href=""><img src="/images/expressionBuilder.gif" border="0"></a> -->
+	      <a href="#" onclick="inp = $(this.parentNode).down('input'); inp.value = ''; keyfilter(inp,3)">
+	          <img src="/images/removeFilter.gif"></a></th>
+	  <th><input type='text' onkeyup='keyfilter(this,4)' size='4'>
+
+	      <a href="#" onclick="inp = $(this.parentNode).down('input'); inp.value = ''; keyfilter(inp,4)">
+	          <img src="/images/removeFilter.gif"></a></th>
+	  <th>&nbsp;</th>
+  </tr>
+  </thead>
+</table> 
+
+  </div>
+</div>
+</div>
+
+<div style="clear:both"/>
+<br />
+
+
+
+

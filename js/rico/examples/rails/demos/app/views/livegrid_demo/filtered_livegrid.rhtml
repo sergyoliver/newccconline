@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Rico LiveGrid Plus-Example 3</title>
+
+<%= javascript_include_tag  "rico", "ricoCommon", "ricoStyles" %>
+
+<%= javascript_load_tag  "LiveGridAjax"%>
+
+<%= javascript_on_load %{
+  var opts = {  
+    frozenColumns : 1,
+    canFilterDefault: false,
+    headingRow    : 1
+  };
+  var menuopts = {};
+  var buffer = new Rico.Buffer.AjaxSQL('/livegrid_demo/ajax_livegrid_content', {TimeOut:0});
+  ex3 = new Rico.LiveGrid ('movie_grid', null, buffer, opts);
+}%>
+
+<%= javascript_tag "Rico.include('demo.css'); Rico.include('greenHdg.css');" %>
+
+<script type='text/javascript'>
+var lastVal=[];
+
+function keyfilter(txtbox,idx) {
+  if (typeof lastVal[idx] != 'string') lastVal[idx] = '';
+  if (lastVal[idx] == txtbox.value) return;
+  lastVal[idx] = txtbox.value;
+  Rico.writeDebugMsg("keyfilter: " + idx + ' ' + txtbox.value);
+  if (txtbox.value == '')
+    ex3.columns[idx].setUnfiltered();
+  else
+    ex3.columns[idx].setFilter('LIKE', txtbox.value + '*', Rico.TableColumn.USERFILTER, function() {txtbox.value='';});
+}
+</script>
+
+<style type="text/css">
+  input { font-weight:normal;font-size:8pt;}
+  th div.ricoLG_cell { height:1.5em; }  /* the text boxes require a little more height than normal */
+</style>
+</head>
+
+<body>
+
+
+<p class="ricoBookmark"><span id="ex3_bookmark">&nbsp;</span></p>
+<table id="movie_grid" class="ricoLiveGrid" cellspacing="0" cellpadding="0">
+    <colgroup>
+    <col style='width:30px;' >
+    <col style='width:230px;' >
+    <col style='width:80px;' >
+    <col style='width:50px;'>
+    <col style='width:60px;' >
+    <col style='width:60px;' >
+    </colgroup>
+  <tr>
+	  <th class=" tableCellHeader" style="text-align:center">#</th>
+	  <th class="tableCellHeader">Title</th>
+	  <th class="tableCellHeader">Genre</th>
+	  <th class="tableCellHeader">Rating</th>
+	  <th class="tableCellHeader">Votes</th>
+	  <th class="tableCellHeader">Year</th>
+  </tr>
+
+  <tr class='dataInput'>
+	  <th class='ricoFrozen'><input type='text' onkeyup='keyfilter(this,0)' size='5'></th>
+	  <th><input type='text' onkeyup='keyfilter(this,1)' size='5'></th>
+	  <th><input type='text' onkeyup='keyfilter(this,2)'></th>
+	  <th><input type='text' onkeyup='keyfilter(this,3)'></th>
+	  <th><input type='text' onkeyup='keyfilter(this,4)'></th>
+	  <th>&nbsp;</th>
+	  <th>&nbsp;</th>
+
+  </tr>
+</thead>
+</table>
+
+</body>
+</html>
+

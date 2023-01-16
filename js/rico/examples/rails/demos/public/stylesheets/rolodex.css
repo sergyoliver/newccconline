@@ -1,0 +1,63 @@
+div.person {
+   position    : relative;
+   border      : 1px solid black;
+   width       : 300px;
+   font-family : Arial;
+   font-size   : 11px;
+   height      : 155px;
+   /*background-image: url(images/gradientgreen80.jpg);*/
+   background-color: #adba8c;
+}
+
+span.personName {
+   position : absolute;
+   top      : 3px;
+   left     : 5px;
+   color    : #ffffff;
+   width    : 290px;
+   display  : block;
+}
+
+span.personAddress {
+   position : absolute;
+   top      : 16px;
+   left     : 5px;
+   color    : white;
+   width    : 290px;
+   display  : block;
+}
+
+span.personOccupation {
+   position    : absolute;
+   top         : 30px;
+   display     : block;
+   font-size   : 14px;
+   font-weight : bold;
+   color       : white;
+   margin-top  : 35px;
+   text-align  : center;
+   width       : 298px;
+}
+
+span.personPhoneNumber {
+   position   : absolute;
+   left       : 5px;
+   top        : 124px;
+   width      : 150px;
+   display    : block;
+}
+
+span.personMobile {
+   position : absolute;
+   left     : 5px;
+   top      : 136px;
+   width    : 150px;
+   display  : block;
+}
+
+span.personNotes {
+   position   : absolute;
+   top        : 158px;
+   width      : 298px;
+   text-align : right;
+}

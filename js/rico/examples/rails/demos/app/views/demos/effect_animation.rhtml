@@ -1,0 +1,63 @@
+<%= javascript_include_tag "demoPosition" %>
+
+
+<span class="header">Animation & Effects</span>
+<br/>
+
+<!-- <span class="codeTitle">var animator: new Rico.Effect.Animator()</span>
+
+<table><tr><td>
+<div id="statusContainer" class="statusContainer" style="visibility:hidden">
+  <span class="statusMsg" id="statusMsg">x</span>
+</div>
+</td></tr></table>
+
+<div class="linkBox">
+    <pre>
+var effect = return new Rico.Effect.Position($('effect_object'), EffectDemo.nextPosition(), null);
+
+animator.play(effect, {steps:20, duration:700})
+
+</pre>
+    </pre>
+</div> -->
+
+<br/>
+<div id="animatePosition"  >
+   <div style="height:20px;font-size:12px">
+      <a  href="javascript:EffectDemo.play(EffectDemo.togglePosition())">Animate Position</a>
+   </div>
+</div>
+
+<div id="animateSize"  >
+   <div style="height:20px;font-size:12px">
+      <a  href="javascript:EffectDemo.play(EffectDemo.toggleSize())">Animate Size</a>
+   </div>
+</div>
+<div id="animateSize"  >
+   <div style="height:20px;font-size:12px">
+      <a  href="javascript:EffectDemo.play(EffectDemo.toggleSizeAndPosition())">Animate Size & Position</a>
+   </div>
+</div>
+
+<!-- <div id="animateFade"  >
+   <div style="height:20px;font-size:12px">
+      <a  href="javascript:EffectDemo.play(EffectDemo.toggleFade())">Animate Fade</a>
+      <pre>
+   </div>
+</div>
+<div id="animatePosition"  >
+   <div style="height:20px;font-size:12px">
+      <a  href="javascript:EffectDemo.pauseplay()">Pause/Play Animation</a>
+   </div>
+</div> -->
+<div id="effect_object" class="sizeMe" style="position:absolute">
+   <div style="height:50px">
+   </div>
+</div>
+
+<%= round_corner 'effect_object' %>
+
+   
+<%= javascript_tag "$$('div.linkBox').each(function(e){Rico.Corner.round(e, {compact:true})})" %>
+

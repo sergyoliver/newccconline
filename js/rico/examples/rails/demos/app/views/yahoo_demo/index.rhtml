@@ -1,0 +1,427 @@
+<%= stylesheet_link_tag "yahooSearch", :media =>'all' %>
+<%= javascript_include_tag  "ricoCommon", "ricoSimpleGrid", "ricoLiveGrid", "ricoLiveGridMenu", "ricoLiveGridAjax"%>
+
+<script>
+   var selectedCategory = 'web';
+   var webSearchUpdater = null;
+   var videoSearchUpdater = null;
+   var imageSearchUpdater = null;
+   
+   function fadeTip() { /* new Effect.FadeTo($('scrollerTip'), 0, 200, 4); */ }
+
+   // called on the onscroll event
+   function updateWebHeader( liveGrid, offset ) {
+      $('webResultRange').innerHTML = 'Results ' + (offset+1) + ' - ' + (offset + liveGrid.metaData.pageSize) + '&nbsp;';
+      updateScrollerTip( liveGrid, offset );
+   }
+   function updateImageHeader( liveGrid, offset ) {
+      $('imageResultRange').innerHTML = 'Results ' + (offset+1) + ' - ' + (offset + liveGrid.metaData.pageSize) + '&nbsp;';
+      updateScrollerTip( liveGrid, offset );
+   }
+   function updateVideoHeader( liveGrid, offset ) {
+      $('videoResultRange').innerHTML = 'Results ' + (offset+1) + ' - ' + (offset + liveGrid.metaData.pageSize) + '&nbsp;';
+      updateScrollerTip( liveGrid, offset );
+   }
+
+   function updateScrollerTip( liveGrid, offset ) {
+
+      var metaData = liveGrid.metaData;
+      var grid     = liveGrid.table;
+   
+      var scrollerTip = $('scrollerTip');
+      var range =  (offset+1);
+      var range2 = (offset + metaData.getPageSize());
+      scrollerTip.innerHTML = '<span class="scrollerTipSpan">' +
+                                     range +
+                                     //+ range + '&#45;' + range2 +   //IE6 went wacky on this??
+                                    '</span>';
+      // offset + (pagesize/2)
+      var topX = (offset + metaData.getPageSize())/ metaData.getTotalRows()*
+                     (grid.parentNode.offsetHeight - (metaData.scrollArrowHeight*2) - scrollerTip.offsetHeight/2) +
+                     scrollerTip.offsetHeight + metaData.scrollArrowHeight;
+
+      var scrollerWidth = 18;
+      var padding = 4; 
+      scrollerTip.style.top = topX + 'px';
+      scrollerTip.style.left = grid.offsetLeft + grid.offsetWidth + scrollerWidth + padding + 'px';
+      scrollerTip.style.visibility = 'visible';
+   }
+
+   function handleEnterKey(e) {
+      if ( e.keyCode == 13 )
+         doYahooSearch();
+   }
+
+   function doYahooSearch() {
+      if ( selectedCategory == 'web')
+          doYahooWebSearch();
+      else if ( selectedCategory == 'video')
+          doYahooVideoSearch();
+      else if ( selectedCategory == 'image')
+          doYahooImageSearch();
+   }
+
+   function doYahooWebSearch() {
+         
+      webSearchUpdater.setRequestParams('query=' + $('searchInput').value);
+      webSearchUpdater.resetContents();
+      webSearchUpdater.requestContentRefresh(0);
+      $('webResultRange').innerHTML = 'Results 1 - 5&nbsp;';
+   }
+   function doYahooVideoSearch() {
+      videoSearchUpdater.setRequestParams('query=' + $('searchInput').value);
+      videoSearchUpdater.resetContents();
+      videoSearchUpdater.requestContentRefresh(0);
+      $('videoResultRange').innerHTML = 'Results 1 - 5&nbsp;';
+   }
+   function doYahooImageSearch() {
+      imageSearchUpdater.setRequestParams('query=' + $('searchInput').value);
+      imageSearchUpdater.resetContents();
+      imageSearchUpdater.requestContentRefresh(0);
+      $('imageResultRange').innerHTML = 'Results 1 - 5&nbsp;';
+   }
+
+   function showWebSearch() {
+      selectCategory('web');
+      $('searchPrompt').innerHTML='Search the Web:';
+   }
+   function showImageSearch() {
+      selectCategory('image');
+      $('searchPrompt').innerHTML='Search Images:';
+   }
+   function showVideoSearch() {
+      selectCategory('video');
+      $('searchPrompt').innerHTML='Search Video:';
+   }
+
+   function selectCategory(category)
+   {
+      if(category == selectedCategory)
+        return;
+
+      $('scrollerTip').style.visibility = 'hidden';
+      deselectCategory(selectedCategory);
+
+      selectedCategory = category;
+      var selectedLink = category + 'Link';
+      selectLink(selectedLink);
+      var selectedDiv = category + 'Search';
+      showScrollerDiv(category);      // this is for FF Mac
+      $(selectedDiv).style.visibility = 'visible';
+   }
+
+   function deselectCategory(categoryToDeselect)
+   {
+      // deselect the menu link (tab)
+      var deselectedLink = categoryToDeselect + 'Link';
+      deselectLink(deselectedLink);
+
+      // hide the div associated with the link
+      var deselectedDiv = categoryToDeselect + 'Search';
+      $(deselectedDiv).style.visibility = 'hidden';
+      
+      // this is for FF Mac
+      hideScrollerDiv(categoryToDeselect);
+   }
+   
+   function hideScrollerDiv(category)
+   {
+      if(category == 'web') {
+         webSearchUpdater.scroller.scrollerDiv.style.display = 'none';
+         webSearchUpdater.scroller.scrollerDiv.style.visibility = 'hidden';
+      } else if (category == 'image') {
+         imageSearchUpdater.scroller.scrollerDiv.style.display = 'none';
+         imageSearchUpdater.scroller.scrollerDiv.style.visibility = 'hidden';
+      } else if (category == 'video') {
+         videoSearchUpdater.scroller.scrollerDiv.style.display = 'none';
+         videoSearchUpdater.scroller.scrollerDiv.style.visibility = 'hidden';
+      }
+   }
+
+   function showScrollerDiv(category)
+   {
+      if(category == 'web') {
+         webSearchUpdater.scroller.scrollerDiv.style.display = '';
+         webSearchUpdater.scroller.scrollerDiv.style.visibility = 'visible';
+      } else if (category == 'image') {
+         imageSearchUpdater.scroller.scrollerDiv.style.display = '';
+         imageSearchUpdater.scroller.scrollerDiv.style.visibility = 'visible';
+      } else if (category == 'video') {
+         videoSearchUpdater.scroller.scrollerDiv.style.display = '';
+         videoSearchUpdater.scroller.scrollerDiv.style.visibility = 'visible';
+      }
+   }
+   
+   function selectLink(link) {
+      //$(link).className = selectedCategory + "SelectedSearchCategory";
+      $(link).className = "selectedSearchCategory";
+
+      var left = $(link).offsetLeft + $('categoryCell').offsetWidth + $(link).offsetWidth/2-6;
+
+      $('selectorImg').style.visibility = 'visible';
+      $('selectorImg').style.left = left + 'px';
+      $('selectorImg').style.top = $('webLink').offsetTop + $('webLink').offsetHeight - 1 + 'px';
+
+      //new Effect.Position($('selectorImg'), left, null, 1, 1);
+   }
+
+   function deselectLink(link) {
+      $(link).className = "deselectedSearchCategory";
+   }
+
+SearchRowsConfigurator = Class.create();
+
+SearchRowsConfigurator.prototype = {
+
+   initialize: function(liveGrid) {
+     this.liveGrid = liveGrid;
+   },
+
+   ajaxUpdate: function(ajaxResponse) {
+      var cell = ajaxResponse.getElementsByTagName("numResults")[0];
+      var numResults = cell.text != undefined ? cell.text : cell.textContent;
+      if ( this.liveGrid.metaData.getTotalRows() != numResults ) {
+         this.liveGrid.metaData.setTotalRows(numResults);
+         this.liveGrid.scroller.updateSize();
+      }
+   }
+};
+
+</script>
+
+
+
+<div style="margin-top:12px;"><img src="/images/rico-search-banner.gif"></img></div>
+<div id="yahooSearchArea" style="position:relative;margin-bottom:6px;">
+<div id="selectorImg" style="visibility:hidden;position:absolute;"><img src="/images/menuPointer.gif"></img></div>
+   <table  cellpadding="0" cellspacing="0" border="0">
+        <tr>
+           <td style="width:140px;" id="categoryCell"><span  id="categoryPrompt">Select Search Category:</span></td>
+           <td id="searchMenu" colspan="2">
+           <table cellpadding="0" cellspacing="0"><tr>
+                <td id="webLink"   style="padding:4px 16px 4px 16px;"><a href="javascript:showWebSearch();">Web</a></td>
+                <td id="imageLink" style="padding:4px 16px 4px 16px;"><a  href="javascript:showImageSearch();">Images</a></td>
+                <td id="videoLink" style="padding:4px 16px 4px 16px;"><a href="javascript:showVideoSearch();">Videos</a></td>
+           </tr></table>
+           </td>
+        </tr>
+    </table>
+    <table class="searchArea" style="border-top: 1px solid #ababab;" border="0" cellpadding="6">
+        <tr>
+           <td style="width:110px;"><span id="searchPrompt">Search the Web:</span></td>
+           <td><input size="50" type="text" id="searchInput" ></input></td>
+           <td><input style="margin-left:8px;" type="button" value="Search Yahoo!" onclick="javascript:doYahooSearch()"></input></td>
+        </tr>
+    </table>
+</div>
+
+<div style="height:440px;position:relative">
+   <div id="scrollerTip" style="visibility:hidden;position:absolute;"></div>
+
+   <div id="webSearch" style="clear:both;position:absolute;visibility:visible">
+
+      <div id="webSearchStatsArea" style="width:680px;">
+      <div style="margin-bottom:2px;float:left">Search Results</div>
+      <div id="webSearchStats" style="margin-bottom:2px;float:right;"><span id="webResultRange"></span><span id="webResultStats"></span></div>
+      </div>
+
+       <div id="webSearchResultsContainer" style="clear:both;width:800px">
+	       <div id="viewPort_web" style="float:left">
+           <table id="webSearchResultsGrid" class="searchTable" cellspacing="0" cellpadding="0">
+           <tr>
+             <td valign="top" class="webSearchIndex">&nbsp;</td>
+             <td class="webSearchCellContent">&nbsp;</td>
+           </tr>
+           <tr>
+             <td valign="top" class="webSearchIndex">&nbsp;</td>
+             <td class="webSearchCellContent">&nbsp;</td>
+           </tr>
+           <tr>
+             <td valign="top" class="webSearchIndex">&nbsp;</td>
+             <td class="webSearchCellContent">&nbsp;</td>
+           </tr>
+           <tr>
+             <td valign="top" class="webSearchIndex">&nbsp;</td>
+             <td class="webSearchCellContent">&nbsp;</td>
+           </tr>
+           <tr>
+             <td valign="top" class="webSearchIndex" >&nbsp;</td>
+             <td class="webSearchCellContent">&nbsp;</td>
+           </tr>
+           <tr>
+             <td valign="top" class="webSearchIndex" >&nbsp;</td>
+             <td class="webSearchCellContent">&nbsp;</td>
+           </tr>
+           </table>
+           </div>
+       </div>
+   </div> <!-- End WEB -->
+
+   <div id="imageSearch" style="position:absolute;visibility:hidden">
+      <div id="imageSearchStatsArea" style="width:680px;">
+      <div style="margin-bottom:2px;float:left">Search Results</div>
+      <div id="imageSearchStats" style="margin-bottom:2px;float:right;"><span id="imageResultRange"></span><span id="imageResultStats"></span></div>
+      </div>
+
+       <div id="imageSearchResultsContainer" style="clear:both;width:800px">
+	       <div id="viewPort_image" style="float:left">
+           <table id="imageSearchResultsGrid" class="searchTable" cellspacing="0" cellpadding="0">
+           <tr>
+             <td class="searchCell" style="width:100px">&nbsp;</td>
+             <td class="searchCell" style="width:580px">&nbsp;</td>
+           </tr>
+           <tr>
+             <td class="searchCell" style="width:100px">&nbsp;</td>
+             <td class="searchCell" style="width:580px">&nbsp;</td>
+           </tr>
+           <tr>
+             <td class="searchCell" style="width:100px">&nbsp;</td>
+             <td class="searchCell" style="width:580px">&nbsp;</td>
+           </tr>
+           <tr>
+             <td class="searchCell" style="width:100px">&nbsp;</td>
+             <td class="searchCell" style="width:580px">&nbsp;</td>
+           </tr>
+           <tr>
+             <td class="searchCell" style="width:100px">&nbsp;</td>
+             <td class="searchCell" style="width:580px">&nbsp;</td>
+           </tr>
+           <tr>
+             <td valign="top" class="webSearchIndex" >&nbsp;</td>
+             <td class="webSearchCellContent">&nbsp;</td>
+           </tr>
+           </table>
+	       </div>
+       </div>
+   </div> <!-- End IMAGES -->
+
+   <div id="videoSearch" style="position:absolute;visibility:hidden">
+      <div id="videoSearchStatsArea" style="width:680px;">
+      <div style="margin-bottom:2px;float:left">Search Results</div>
+      <div id="videoSearchStats" style="margin-bottom:2px;float:right;"><span id="videoResultRange"></span><span id="videoResultStats"></span></div>
+      </div>
+
+       <div id="videoSearchResultsContainer" style="clear:both;width:800px">
+	       <div id="viewPort_video" style="float:left">
+           <table id="videoSearchResultsGrid"
+                class="searchTable"
+                cellspacing="0"
+                cellpadding="0">
+           <tr>
+             <td class="searchCell" style="width:100px">&nbsp;</td>
+             <td class="searchCell" style="width:580px">&nbsp;</td>
+           </tr>
+           <tr>
+             <td class="searchCell" style="width:100px">&nbsp;</td>
+             <td class="searchCell" style="width:580px">&nbsp;</td>
+           </tr>
+           <tr>
+             <td class="searchCell" style="width:100px">&nbsp;</td>
+             <td class="searchCell" style="width:580px">&nbsp;</td>
+           </tr>
+           <tr>
+             <td class="searchCell" style="width:100px">&nbsp;</td>
+             <td class="searchCell" style="width:580px">&nbsp;</td>
+           </tr>
+           <tr>
+             <td class="searchCell" style="width:100px">&nbsp;</td>
+             <td class="searchCell" style="width:580px">&nbsp;</td>
+           </tr>
+           <tr>
+             <td valign="top" class="webSearchIndex" >&nbsp;</td>
+             <td class="webSearchCellContent">&nbsp;</td>
+           </tr>
+           </table>
+           </div>
+       </div>
+   </div> <!-- End VIDEO -->
+
+</div>
+
+
+<div id="notes">
+
+<div style="margin-top:6px; border-top-width:1px; border-top-style:solid;" id="accordionExample">
+
+	<div id="panel1">
+	  <div id="panel1Header" class="accordionTabTitle">
+	  	<img style="vertical-align:middle" src="/images/accordion-icon.gif"><span style="margin-left:4px;font-weight:bold" >Important Note</span>
+	  </div>
+	  <div id="panel1Content"  class="accordionTabContent">
+            <p style="display:inline">Yahoo's public API limits us to 5000 searches per category in a 24 hour period. If you can limit your
+            experimenting to 4 or 5 searches per category and limit the amount of scrolling to a reasonable amount, you will allow others to experiment with
+            live data. Once we reach the threshold, we return canned data from previous searches. A note appears if we are using canned
+            data.</p>
+		 
+	  </div>
+	</div>
+
+	<div id="panel2">
+	  <div id="panel2Header" class="accordionTabTitle">
+	  	<img style="vertical-align:middle" src="/images/accordion-icon.gif"><span style="margin-left:4px;font-weight:bold" >Overview</span>
+	  </div>
+		 <div id="panel2Content" class="accordionTabContent">
+		    <div>   <span style="font-size:11px;">The LiveGrid behavior takes an ordinary Html table and: </span>
+            <ul>
+            <li style="padding-top:2px;">Connects it live to Ajax data requests</li>
+            <li style="padding-top:2px;">Creates a scrollbar that becomes the live data navigator for the table.</li>
+            <li style="padding-top:2px;">Automatically populates the data into the cells.</li>
+            <li style="padding-top:2px;">Employs data buffering and event compression strategies to improve performance.</li>
+            </ul>
+            <p >In this demo, we connect three HTML tables (Web Search, Images Search and Videos Search)
+            to the Yahoo Developer Web Services API with the LiveGrid behavior. We created a backend process that given a
+            query will request a search from Yahoo.
+            When the scrollbar is moved, the same backend process is called to retrieve more data. What you see is an alternative
+            to the traditional paging (next/prev) model. With Ajax it is now possible to treat a grid like Google treated maps.</p>
+         </div>
+	     </div>
+	  </div>
+	<div id="panel3">
+	  <div id="panel3Header" class="accordionTabTitle">
+	  	<img style="vertical-align:middle" src="/images/accordion-icon.gif"><span style="margin-left:4px;font-weight:bold" >More Information</span>
+	  </div>
+		 <div id="panel3Content" class="accordionTabContent">
+		    <div>
+             <p style="display:inline">There are two blog entries we have written that discuss the LiveGrid.</p>
+             <p>One is a <a class="normalLink" href="http://richardcowin.typepad.com">technical journalling</a> about how the LiveGrid behavior was developed.</p>
+             <p>The <a class="normalLink" href="http://looksgoodworkswell.blogspot.com/2005/06/death-to-paging-rico-livegrid-released.html">other</a> explores the user experience angle and whether its time to kill paging and use scrolling instead.</p>
+             </p>
+
+		    </div>
+	     </div>
+	  </div>
+</div>   
+</div>
+
+<%=javascript_on_load %{
+    var webOpts   = { prefetchBuffer: false, onscroll: updateWebHeader   };
+    var imageOpts = { prefetchBuffer: false, onscroll: updateImageHeader };
+    var videoOpts = { prefetchBuffer: false, onscroll: updateVideoHeader };
+    
+    var webBuffer=new Rico.Buffer.AjaxSQL('/yahoo_demo/ajax_yahoo_web_search', {TimeOut:60})
+    new Rico.LiveGrid ('webSearchResultsGrid', new Rico.GridMenu({}), webBuffer, webOpts);
+
+    var imageBuffer=new Rico.Buffer.AjaxSQL('/yahoo_demo/ajax_yahoo_image_search', {TimeOut:60})
+    new Rico.LiveGrid ('imageSearchResultsGrid', new Rico.GridMenu({}), imageBuffer, imageOpts);
+    
+    var videoBuffer=new Rico.Buffer.AjaxSQL('/yahooo_demo/ajax_yahoo_video_search', {TimeOut:60})
+    new Rico.LiveGrid ('videoSearchResultsGrid', new Rico.GridMenu({}), videoBuffer, videoOpts);
+
+
+    $('searchInput').onkeydown = handleEnterKey.bindAsEventListener($('searchInput'));
+    ajaxEngine.registerAjaxElement('webResultStats');
+    ajaxEngine.registerAjaxElement('imageResultStats');
+    ajaxEngine.registerAjaxElement('videoResultStats');
+    ajaxEngine.registerAjaxObject( 'configureWebSearchRows',   new SearchRowsConfigurator(webSearchUpdater)   );
+    ajaxEngine.registerAjaxObject( 'configureImageSearchRows', new SearchRowsConfigurator(imageSearchUpdater) );
+    ajaxEngine.registerAjaxObject( 'configureVideoSearchRows', new SearchRowsConfigurator(videoSearchUpdater) );   
+    
+    selectedCategory = 'web';
+    selectLink(selectedCategory + 'Link');
+    deselectCategory('image');
+    deselectCategory('video');
+    selectCategory('web'); 
+}%>
+
+<%= accordion('.accordionTabTitle', '.accordionTabContent', :panelHeight => 227) %>
+

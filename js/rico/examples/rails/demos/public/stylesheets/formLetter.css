@@ -1,0 +1,76 @@
+
+div.formLetter {
+
+	font-family : Trebuchet MS, Arial, Helvetica, sans-serif;
+	font-size   : 11px;
+
+   position : relative;
+   padding  : 3px;
+   width    : 500px;
+   height   : 520px;
+   border   : 1px solid #000000;
+}
+
+div.letterheadSection {
+   position   : absolute;
+   right      : 3px;
+   text-align : right;
+   clear      : none;
+   color      : #8b8b8b;
+}
+
+div.addressSection {
+   position : relative;
+   float    : left;
+   height   :  70px;
+   width    : 250px;
+}
+
+span.fullNameX {
+}
+
+span.addressStreetX {
+   position : absolute;
+   top      : 14px;
+   left     : 0px;
+}
+
+span.cityStateLine {
+   position: absolute;
+   top     : 28px;
+   left    : 0px;
+}
+
+span.addressCityX {
+}
+
+span.addressStateX {
+}
+
+span.addressZipcodeX {
+}
+
+div.salutationSection {
+   margin-left : 10px;
+   clear       : both;
+}
+
+div.letterBodySection {
+   border : 1px solid #ffffff;
+   margin: 10px 30px 10px 30px;
+}
+
+div.letterSignatureSection {
+   margin: 1px 30px 10px 300px;
+}
+
+div.pagefooterSection {
+  color   : #8b8b8b;
+  position: absolute;
+  bottom  : 3px;
+  right   : 3px;
+}
+
+span.substitutedText {
+  background-color : rgb(255, 255, 180);
+}

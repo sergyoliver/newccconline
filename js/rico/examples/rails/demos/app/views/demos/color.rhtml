@@ -1,0 +1,50 @@
+<%= javascript_include_tag "ricoStyles", "demoColor"%>
+
+<span class="header">Rico.Color EXAMPLE</span>
+
+<div id="rColor" style="background-color:#fffefe;width:720px">
+<table cellspacing="0" cellpadding="0" style="padding:5px"><tr>
+
+<td>
+   <div id="formPanel" class="formPanel">
+      <table cellspacing="1" cellpadding="0">
+        <tr><td align="right"><span class="label">Red:&nbsp; </span></td><td><input  class="field" size="4" maxlength="3"  type="text" id="red"/></td><td><span class="label">&nbsp;(0-255)</span></td></tr>
+        <tr><td align="right"><span class="label">&nbsp;Green:&nbsp;</span></td><td><input class="field" size="4"  maxlength="3" type="text" id="green"/></td><td><span class="label">&nbsp;(0-255)</span></td></tr>
+        <tr><td align="right"><span class="label">Blue: &nbsp;</span></td><td><input class="field" size="4" maxlength="3" type="text" id="blue"/></td><td><span class="label">&nbsp;(0-255)</span></td></tr>
+        <script>attachValueChangeListeners()</script>
+      </table>
+   </div>
+   <script>Rico.Corner.round('formPanel');</script>
+</td>
+
+<td>
+   <div class="explain-text">
+      This page illustrates the Rico.Color DHTML object.  A Rico.Color object is constructed
+      with a set of RGB values.  The color has methods for setting red, green, and blue
+      individually as well as setting hue, saturation, and brightness.  Once values have been set
+      a string representation can be retrieved via the asHex() or asHSB() methods.
+   </div>
+</td>
+
+</tr>
+
+<tr><td colspan="2">
+   <div id="illustrate" class="formPanel" style="background-color:#c6c3de;width:705px">
+      <div>
+         <span id="rgbCode" class="codeTitle">
+            &nbsp;var color = new Rico.Color( 0, 0, 0 ); // color.asHex() = #000000
+         </span>
+         <hr id="colorBox" style="width:480px"></b>
+      </div>
+   </div>
+   <script>Rico.Corner.round('illustrate' );</script>
+</td></tr>
+
+</table>
+</div>
+
+<%= javascript_tag %{
+    Rico.Corner.round('rColor', {corners:"tr"} ); 
+    $('red').focus();
+    } %>
+

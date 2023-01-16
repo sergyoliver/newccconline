@@ -1,0 +1,58 @@
+
+
+.weatherPanel, .weatherTitle, .weatherDescr {
+   font-family: Arial;
+   font-size: 11px;
+   font-weight: normal;
+   color: white;
+}
+
+.weatherPanel {
+   padding:12px 0px 0px 12px;
+}
+
+.weatherTitle, .weatherDescr {
+   font-weight: bold;
+   font-size: 12px;
+}
+
+.weatherDescr {
+   margin-bottom:12px;
+}
+
+.weatherTemp {
+   vertical-align:top;
+   font-size:58px;
+   font-family:Arial
+}
+
+.weatherDetail, .weatherDetailTitle {
+   font-size:11px; color:white;
+}
+
+.weatherDetailTitle {
+   font-weight: bold;
+   padding-right:6px;
+}
+
+div.weather span {
+   color: white;
+}
+
+#weatherExample {
+   width: 180px;
+}
+#weatherdotcomarea a:visited, #weatherdotcomarea a:link, #weatherdotcomarea a:hover,
+#sponsoredLinks a:visited, #sponsoredLinks a:link, #sponsoredLinks a:hover {
+   color: black;
+   text-decoration:underline;
+   font-size: 11px;
+}
+
+ul,li {
+   font-size: 11px;
+}
+
+#leftHalf a.black:visited, #leftHalf a.black:link, #rightHalf a.black:visited, #rightHalf a.black:link {
+   color: black;
+}

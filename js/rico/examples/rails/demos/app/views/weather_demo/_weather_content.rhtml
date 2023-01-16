@@ -1,0 +1,33 @@
+<%  cc = @weather.cc %>
+<div class="weatherTitle">
+    <%=@weather.loc.dnam%>
+</div>
+<div>
+  <span><image id="ccImg" src="<%="/images/weather/#{cc.icon}.png"%>"></image></span>
+  <span class="weatherTemp"><%=cc.tmp%>&#176;F</span>
+</div>
+<div class="weatherDescr">
+    <%=cc.t%>
+</div>
+<div>
+  <table cellspacing="0" cellpadding="0" border="0">
+     <tr class="weatherDetail">
+        <td class="weatherDetailTitle">Humidity:</td>
+        <td><%=cc.hmid%>&#37;</td></tr>
+     <tr class="weatherDetail">
+        <td class="weatherDetailTitle">Barometer:</td>
+        <td><%=cc.bar.r%>&quot;</td></tr>
+     <tr class="weatherDetail">
+        <td class="weatherDetailTitle">Wind:</td>
+        <td><%="From #{cc.wind.t} at #{cc.wind.s} mph"%></td></tr>
+     <tr class="weatherDetail">
+        <td class="weatherDetailTitle"></td>
+        <td><%="gusting to #{cc.wind.gust} mph"%></td></tr>
+     <tr class="weatherDetail">
+        <td class="weatherDetailTitle">Dewpoint:</td>
+        <td><%="#{cc.dewp}&#176;F"%></td></tr>
+     <tr class="weatherDetail">
+        <td class="weatherDetailTitle">Heat Index:</td>
+        <td><%="#{cc.flik}&#176;F"%></td></tr>
+  </table>
+</div>

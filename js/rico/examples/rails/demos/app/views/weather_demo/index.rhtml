@@ -1,0 +1,103 @@
+<%= stylesheet_link_tag "weather", :media =>'all' %>
+<%= javascript_include_tag "weather" %>
+
+<%= javascript_on_load %{
+   ajaxEngine.registerRequest( 'getWeatherInfo', '/weather_demo/ajax_weather_info' );
+   ajaxEngine.registerAjaxElement( 'ccInfo' );
+   ajaxEngine.registerAjaxElement( 'moonInfo' );
+   ajaxEngine.registerAjaxElement( 'sunInfo' );
+   ajaxEngine.registerAjaxElement( 'sponsoredLinks' );
+
+   $('zip').onkeydown = handleEnterKey.bindAsEventListener($('zip'));}
+%>
+
+<div id="container">
+     <a id="checkanother" style="font-size:11px;font-weight:bold;visibility:hidden;" href="javascript:resetWeather();">Check another zip?</a>
+
+<div id="leftHalf" style="width:250px">
+
+ <div style="margin-bottom:20px; position:relative;">
+
+    <div style="width:240px; margin-top:6px; border-top-width:1px; border-top-style:solid;" id="weather">
+
+     <div id="current"  style="background-color:#39497b;">
+       <div id="currentHeader" class="accordionTabTitle">
+         Current Conditions
+       </div>
+       <div style="background-color:#39497b;background-image: url('/images/weatherbg.png')"  class="weatherTabContent">
+         <div class="weatherPanel" id="ccInfo">
+         </div>
+       </div>
+     </div>
+
+     <div id="moon" style="background-color:#39497b;">
+       <div id="moonHeader" class="accordionTabTitle">
+         Moon
+       </div>
+       <div style="background-color:#39497b;background-image: url('/images/weatherbg.png')"  class="weatherTabContent">
+         <div class="weatherPanel" id="moonInfo">
+         </div>
+       </div>
+       </div>
+
+     <div id="sun"  style="background-color:#39497b;">
+       <div id="sunHeader"  class="accordionTabTitle">
+         Sunlight Summary
+       </div>
+         <div style="background-color:#39497b;background-image: url('/images/weatherbg.png')" class="weatherTabContent">
+         <div class="weatherPanel" id="sunInfo">
+         </div>
+       </div>
+     </div>
+    </div>
+
+    <div id="frontdoor" style="height:307px;width:240px;position:absolute;top:0px;background-image: url('/images/weather-frontplate.gif')">
+         <div id="zipinput" style="position:absolute;top:100px;left:12px;overflow:hidden;">
+            <table cellpadding="0" cellspacing="0">
+            <tr>
+            <td><input size="5" type="text" id="zip" ></input></td><td>&nbsp;</td>
+            <td><input style="margin-top:2px;" type="button" value="Lookup" onclick="javascript:getWeatherInfo()"></input></td>
+            </tr>
+            </table>
+         </div>
+     </div>
+</div>
+
+
+<div id="weatherdotcomarea">
+   <span style="font-size:11px;"><a href="http://www.weather.com/?prod=xoap&par=1009298273" ><img border="0" style="margin-right:4px;" id="wclogo" src="/images/weather/TWClogo_32px.png"/></a>
+   Weather data provided by <a href="http://www.weather.com/?prod=xoap&par=1009298273">weather.com&#169;</a></span>
+
+   <script>fixImage( $('wclogo'), 43, 32 );</script>
+   <p>Featured on weather.com&#169;:</p>
+   <div id="sponsoredLinks">
+
+
+
+   </div>
+</div>
+</div>
+<div id="rightHalf" style="margin-left:270px">
+   <h2 style="margin-bottom:0px; padding-bottom:0px;">WEATHER WIDGET</h2>
+   <span style="font-size:11px;">This tool illustrates three aspects of the framework:</span>
+   <ul>
+   <li style="padding-top:2px;">Ajax - Entering a zip code calls weather.com XML weather service to
+   fetch the current weather conditions. This illustrates
+   the ability to update multiple areas of the page in one response. The <em>Current Conditions</em>, <em>Moon</em>, <em>Sunlight Summary</em> and the
+   <em>Weather.com Featured Links</em> (below the widget) are all updated from a single Ajax call.</li>
+   <li style="padding-top:2px;">Cinematic Effects - Transitions from the front door (Enter zip faceplate) to the weather
+   information, animated text movement, slide effects in the accordion are all illustrations of
+   the Rico Effects library.</li>
+   <li style="padding-top:2px;">Behavior - The accordion is created by applying an Accordion behavior to a set of divs.
+   These are the DIV areas that get populated after the ajax call for weather data completes.</li>
+   </ul>
+   <p >The resemblence to <a class="black" href="http://www.laszlosystems.com/partners/support/demos/weather/">Laszlo Systems weather application</a>
+   is on purpose. It is meant to compare
+   their flash based solution with a pure DHTML/Ajax solution.</p>
+</div>
+</div>
+
+
+
+<!-- <%= javascript_on_load "new Rico.Accordion( 'weather', {panelHeight:220, expandedBg:'#39497b'})"%> -->
+<%= accordion('.accordionTabTitle', '.weatherTabContent', :panelHeight => 220) %>

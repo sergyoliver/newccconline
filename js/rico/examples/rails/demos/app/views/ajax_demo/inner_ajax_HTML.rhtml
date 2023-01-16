@@ -1,0 +1,123 @@
+<%= stylesheet_link_tag "rolodex", :media =>'all' %>
+
+<%= javascript_include_tag "ricoDragAndDropCustomDraggable"%>
+
+<span class="header">Ajax Demo - Inner HTML - Rolodex</span>
+<br/><br/>
+
+<div id="rolodexAccordion" class = "accordion" style="width:600px">
+
+<div>
+
+   <div class="accordionTabTitle">
+	  	<img style="vertical-align:middle" src="/images/accordion-icon.gif"><span style="margin-left:4px;font-weight:bold" >Ajax Rolodex</span>
+   </div>
+
+   <div id="rolodexTabContent" class="accordionTabContent">
+      <table cellspacing="5" cellpadding="5"><tr>
+
+      <td valign="top">
+         <select id="listBox" size="10" onchange="getPersonInfo(this)" style="font-family:arial;font-size:11px;display:inline;border:1px solid red">
+            <script>
+               for ( var i = 0 ; i < names.length ; i++ )
+                  document.write( "<option value='" + names[i] + "'>" + names[i] + "</option>" );
+            </script>
+         </select>
+      </td>
+      <td>
+         <div style="display:inline" id="personInfo">
+            Select a name to the left to see the AJAX rolodex entry
+            for the selected person.
+         </div>
+      </td>
+
+      </tr></table>
+   </div>
+
+</div>
+
+
+<div>
+
+   <div class="accordionTabTitle">
+	  	<img style="vertical-align:middle" src="/images/accordion-icon.gif"><span style="margin-left:4px;font-weight:bold" >Explanation</span>
+   </div>
+
+   <div class="accordionTabContent">
+      <br/>
+      This example illustrates the use of Rico's ajaxEngine APIs which facilitate replacing
+      a chunk of the page with HTML.  The AJAX response that comes back to the page is a
+      &lt;response type="element" id="somePageElementId"&gt;.  The reponse tells the engine
+      that there is an element on the page with id somePageElementId, and that the nested HTML
+      within the response element should become the innerHTML of the page element.
+      <p>
+      In this example, a struts action returns a chunk of HTML that looks similar to a
+      rolodex card.  This becomes the innerHTML of a div on the page which holds the card.
+      </p>
+      <p>
+      Any server technology that returns the response as described above could be used instead
+      of Struts.
+      </p>
+   </div>
+</div>
+
+<div>
+
+   <div class="accordionTabTitle">
+	  	<img style="vertical-align:middle" src="/images/accordion-icon.gif"><span style="margin-left:4px;font-weight:bold" >Code</span>
+   </div>
+
+   <div id="codeContentBox" class="accordionTabContent" style="padding-right:0px">
+   <div id="codeContentScroller" style="height:195px;overflow:auto">
+      <b>Registration</b><pre>function registerAjaxInfo() {
+   ajaxEngine.registerRequest( 'getPersonInfo', '/ajax_demo/getPersonInfo' );
+   ajaxEngine.registerAjaxElement( 'personInfo' );
+}
+</pre>
+   This above function is invoked when the page loads.  It accomplishes two things.  First,
+   it registers a request by giving it a logical name.  The logical name 'getPersonInfo'
+   becomes the name for the request represented by the URL 'getPersonInfo.do'. Secondly,
+   the element with ID personInfo is registered with the ajax engine as en element that
+   can have it's inner HTML replaced with a response. Think of the ajaxEngine symbol as
+   a singleton object available to each page.<br/><br/>
+
+<b>Sending the request</b><pre>function getPersonInfo(selectBox) {
+   var nameToLookup = selectBox.value.split(",");
+   var firstName = nameToLookup[1].substring(1);
+   var lastName  = nameToLookup[0];
+
+   ajaxEngine.sendRequest( 'getPersonInfo',
+                           "firstName=" + firstName,
+                           "lastName=" + lastName );
+}
+</pre>
+
+   This function is triggered by the onchange of the selectbox to in the rolodex
+   example.  It simply
+   parses the first & last name of the selected item and passes that information to
+   the back-end request.  When the response is returned it is handled
+   entirely by the ajax engine.
+
+   </div>
+   </div>
+</div>
+
+</div>
+
+<%= accordion('.accordionTabTitle', '.accordionTabContent', :panelHeight => 195) %>
+
+
+<%=javascript_tag %{
+  function getPersonInfo(selectBox) {
+     var nameToLookup = selectBox.value.split(",");
+     var firstName = nameToLookup[1].substring(1);
+     var lastName  = nameToLookup[0];
+     ajaxEngine.sendRequest( 'getPersonInfo',
+                             "firstName=" + firstName,
+                             "lastName=" + lastName );
+  }}
+%>
+
+<%=javascript_on_load %{ajaxEngine.registerRequest( 'getPersonInfo', '/ajax_demo/ajax_person_info' );
+                        ajaxEngine.registerAjaxElement( 'personInfo' );}%>
+

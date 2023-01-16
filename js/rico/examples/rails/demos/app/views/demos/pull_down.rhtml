@@ -1,0 +1,29 @@
+
+<link href="/stylesheets/demo_pull_down.css" media="screen" rel="Stylesheet" type="text/css" />
+
+<div id="header">
+    <div id="top-panel">
+        <a href="javascript:void(0);" id="code-button" onclick="PullDown.panel.toggle(); return false;" title="Code">
+            <img alt="code" src="/images/down_arrow.png" />
+            <img alt="code" src="/images/down_arrow.png" style="display:none"/>
+        </a>
+    </div>
+    <div id="main-part">
+    	<div id="outer_panel" class="panel-top">  
+    		<form action="#" id="inner_panel" method="post" name="search_form" >					  
+    			    <div style="font-size:14px">
+    			    Pull down demonstration</div> 
+    			    <br/><br/>
+                    <pre>var panel = Rico.SlidingPanel.top( $('outer_panel'), $('inner_panel'));   
+//
+panel.toggle();</pre>				
+<br/>
+    		</form>
+     	</div>
+    </div>
+</div>
+<%= javascript_on_load %{
+     PullDown.panel = Rico.SlidingPanel.top( $('outer_panel'), $('inner_panel'));   
+                          
+}%>
+<%= javascript_tag "var PullDown = {};"%>

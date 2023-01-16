@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<% unless @error_msg %>
+   <ajax-response>
+      <response type="element" id="ccInfo">
+        <%= render :partial => "weather_content" %>
+      </response>
+      
+      <response type="element" id="moonInfo">
+          <%= render :partial => "moon_content" %>
+      </response>
+      
+      <response type="element" id="sunInfo">
+          <%= render :partial => "sun_content" %>
+      </response>
+      
+      <response type="element" id="sponsoredLinks">
+          <%= render :partial => "sponsored_links" %>
+      </response>
+
+   </ajax-response>
+
+<%else%>
+   <ajax-response>
+      <response type="element" id="ccInfo">
+         <span><%=@error_msg%></span>
+      </response>
+      <response type="element" id="moonInfo">
+         <span><%=@error_msg%></span>
+      </response>
+      <response type="element" id="sunInfo">
+         <span><%=@error_msg%></span>
+      </response>
+   </ajax-response>
+
+<%end%>
+

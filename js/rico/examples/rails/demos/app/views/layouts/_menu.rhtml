@@ -1,0 +1,23 @@
+<table cellspacing="0" cellpadding="0" border="0"><tr>
+   <td ><img class="imgcell" src="/images/ricologo.gif" border="0" alt=""/></td>
+   <td style="padding:3px;"></td>
+   <td ><img class="imgcell" src="/images/ricoheader.gif" border="0" alt=""/></td>
+   <td class="headerEndCap"></td>
+   <td ><img class="imgcell" src="/images/ricoEndCap.gif" border="0" alt=""/></td>
+</tr></table>
+
+<div id="menu" style="padding-top:5px;padding-bottom:5px" class="menuBox roundNormal">
+   <span class="leftPadding">
+	       <a id="homeLink" class="menuLink" href="http://openrico.org/">Home</a>
+           <a id="demoLink" class="selectedMenuLink" href=<%=url_for(:controller=>"demos")%>>Demos</a>
+	       <a id="downloadsLink" class="menuLink" href="http://openrico.org/downloads.page">Downloads</a>
+       
+	   <a id="weblogLink"      class="menuLink" href="http://weblog.openrico.org/">Weblog</a>
+	   <a id="forumink"      class="menuLink" href="http://forum.openrico.org/">Forum</a>
+	   
+       <%=menu_link "Resources", url_for(:controller=>"resources")%>
+       <a id="resourcesLink" class="menuLink" href="http://openrico.org/resources">Home</a>
+       <a id="trackingLink"      class="menuLink" href="http://tracking.openrico.org/">Tracking</a>
+	   
+   </span>
+</div>

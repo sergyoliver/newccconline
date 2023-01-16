@@ -1,0 +1,12 @@
+<ajax-response>
+   <response type="element" id="personInfo">
+      <div class="person">
+         <span class="personName"><%="#{@person.title} #{@person.first_name} #{@person.last_name}"%></span>
+         <span class="personAddress"><%="#{@person.street_address} #{@person.city}, #{@person.state} #{@person.zip_code}"%></span>
+         <span class="personOccupation"><%=@person.occupation%></span>
+         <span class="personPhoneNumber"><%="Phone #: #{@person.phone}"%></span>
+         <span class="personMobile"><%="Mobile #: #{@person.mobile}"%></span>
+         <span class="personNotes"><%="Notes: #{@person.notes}"%></span>
+      </div>
+   </response>
+</ajax-response>

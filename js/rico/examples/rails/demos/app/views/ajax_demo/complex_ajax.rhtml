@@ -1,0 +1,207 @@
+<%= stylesheet_link_tag "formLetter", :media =>'all' %>
+
+<%= javascript_include_tag "ricoDragAndDropCustomDraggable", "formLetter", "formLetterUpdater"%>
+
+<span class="header">Ajax Demo - Javascript Updater - Form Letter</span>
+<br/>
+<br/>
+
+<div id="formLetterAccordion" style="width:700px">
+
+<div id="formLetterPanel">
+
+   <!-- ============================================================================ -->
+   <!-- Start Of Ajax FormLetter Tab                                                 -->
+   <!-- ============================================================================ -->
+   <div class="accordionTabTitle">
+	  	<img style="vertical-align:middle" src="/images/accordion-icon.gif"><span style="margin-left:4px;font-weight:bold" >Ajax Form Letter</span>
+   </div>
+
+   <div id="formLetterAccordionContent" class="accordionTabContent">
+
+<div style="position:relative">
+
+   <div id="formLetterList" style="position:relative;top:17px;left:12px;width:120px">
+      <select id="listBox" size="11" onchange="getPersonInfo(this)" style="font-family:arial;font-size:11px;display:inline;border:1px solid red;">
+         <option value="none">nobody</option>
+         <script>
+            for ( var i = 0 ; i < names.length ; i++ )
+               document.write( "<option value='" + names[i] + "'>" + names[i] + "</option>" );
+         </script>
+      </select>
+   </div>
+
+<div id="formLetterDiv" style="width:559px;position:absolute;top:0px;left:140px;height:340px;overflow:auto">
+
+   <a class="demoLinks" style="display:inline" href="javascript:turnOnHighlighting()">turn on highlighting</a>
+   &nbsp;|&nbsp;
+   <a class="demoLinks" style="display:inline" href="javascript:turnOffHighlighting()">turn off highlighting</a>
+<div id="formLetter" class="formLetter">
+
+   <!-- the letterhead section -->
+   <div class="letterheadSection">
+   Ronco Widgets Inc.
+   </div>
+
+   <!-- the address section -->
+   <div class="addressSection">
+    To: <span class="fullNameX fullName">[fullName]</span>
+        <span class="addressStreetX streetAddress">[streetAddress]</span>
+        <span class="cityStateLine">
+           <span class="addressCityX city">[addresscity]</span>
+           <span class="addressStateX state">[addressState]</span>
+           <span class="addressZipcodeX zipcode">[addressZipcode]</span>
+        </span>
+   </div>
+
+   <!-- the salutation section -->
+   <div class="salutationSection">
+      Dear <span class="title">[title]</span> <span class="lastName">[lastName]</span>,
+   </div>
+
+   <!-- the body of the letter section -->
+   <div class="letterBodySection">
+
+      Thank you for purchasing a Roncomatic Slusher TM.  The slusher will be an invaluable
+      addition to your kitchen.  We are excited about the hours you will save by using
+      our slusher, <span class="firstName">[firstName]</span>.
+
+      <p>
+      Please take a moment to verify the billing/shipping information that you gave us.
+      If any of the information is incorrect, please contact one of our customer service
+      representatives at (800)-555-RNCO.
+      </p>
+
+      <div style="width:250px;margin-left:50px;margin-bottom:15px;">
+
+      <span class="fullName">[fullName]</span><br/>
+      <span class="streetAddress">[streetAddress]</span><br/>
+      <span style="text-align:right" class="city">[addresscity]</span>,
+      <span class="state">[addressState]</span>
+      <span class="zipcode">[addressZipcode]</span><br/><br/>
+
+      Phone: <span class="phoneNumber">[phoneNumber]</span>, Mobile: <span class="mobileNumber">[mobileNumber]</span><br/>
+      </div>
+
+      <p>
+      Again, <span class="title">[title]</span>
+      <span class="lastName">[lastName]</span>,&nbsp;we thank you for your business and
+      we hope you enjoy your purchase.  Please feel free to call our customer service
+      number any time 24 hours a day if you have any questions or problems with your
+      new product.
+      </p>
+   </div>
+
+   <!-- the signature section -->
+   <div class="letterSignatureSection">
+      Sincerely,<br/>
+      <p>
+      Gregory Flemming<br/>
+      Chief Executive Officer<br/>
+      Ronco Widgets Inc.
+      </p>
+   </div>
+
+   <!-- page footer section -->
+   <div class="pagefooterSection">
+   Ronco Widgets Incorporated, 1234 Ronco Way, RoncoVille, CA
+   </div>
+
+</div>
+<br/>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ============================================================================ -->
+<!-- Start Of Explanation Tab                                                     -->
+<!-- ============================================================================ -->
+<div id="explanationPanel">
+   <div class="accordionTabTitle">
+	  	<img style="vertical-align:middle" src="/images/accordion-icon.gif"><span style="margin-left:4px;font-weight:bold" >Explanation</span>
+   </div>
+   <div id="explanationContent" class="accordionTabContent" style="padding:0px 8px">
+      &nbsp;<span style="margin-top:0px;display:block">
+      This example illustrates generating a form letter with the selected person's information
+      sprinkled throughout. The person's information is retrieved each time via the Ajax engine.
+      </span>
+      <span style="margin-top:8px;display:block">
+      In this flavor of usage, the AJAX response that comes
+      back to the page is of the form &lt;response type="object" id="someObjectId"&gt;.  The reponse
+      tells the ajaxEngine that there is a JavaScript object registered under the id 'someObjectId'
+      that has an ajaxUpdate() method.
+      </span>
+      <span style="margin-top:8px;display:block">
+      The ajaxEngine invokes the ajaxUpdate method on the object and passes
+      the response XML.  The XML approach allows the object to interogate structured data and update the
+      page in any way it sees fit.  This approach is better suited for AJAX calls that might need to update
+      several portions of the screen, or do some processing to the data before it updates the page.
+      </span>
+      <span style="margin-top:8px;display:block">
+      In this example, a struts action returns XML containing all of the information about the selected
+      person, and the object changes all of the relevant sections of HTML in the form letter.  An example of the XML response
+      is shown below.</span>
+      <pre>&lt;ajax-response>
+   &lt;response type="objeect" id="formLetterUpdater">
+      &lt;person title="Mrs." fullName="Debbie Holloman"
+              firstName="Debbie" lastName="Holloman"
+              streetAddress="2243 Fallenwood Street" city="Dallas"
+              state="TX" zipcode="75555-3483"
+              occupation="Administrative Assistant"
+              phoneNumber="(214) 555-2343"
+              mobileNumber="(214) 555-2144"
+              personNotes="Has a house on the east-side by my cousin." />
+   &lt;/response>
+&lt;/ajax-response></pre>
+   </div>
+</div>
+
+<!-- ============================================================================ -->
+<!-- Start Of Code Tab                                                            -->
+<!-- ============================================================================ -->
+<div id="codePanel">
+   <div class="accordionTabTitle">
+	  	<img style="vertical-align:middle" src="/images/accordion-icon.gif"><span style="margin-left:4px;font-weight:bold" >Code</span>
+   </div>
+   <div id="codeContent" class="accordionTabContent" style="padding: 0px 0px 0px 8px">
+   <div id="codeScroller" style="height:390px;overflow:auto">
+      <b>Registration</b><pre>function initPage() {
+   formLetterUpdater = new FormLetterUpdater();
+   ajaxEngine.registerRequest( 'getPersonInfo', '/ajax_demo/ajax_person_info_xml' );
+   ajaxEngine.registerAjaxObject( 'formLetterUpdater', formLetterUpdater );
+}
+
+</pre>
+   This above function is invoked when the page loads.  It accomplishes two things.  First,
+   it registers a request by giving it a logical name.  The logical name 'getPersonInfo'
+   becomes the name for the request represented by the URL 'getPersonInfoXML.do'. Secondly,
+   the object with ID formLetterUpdater is registered with the ajax engine as an object that
+   can handle an object type ajax response.<br/><br/>
+
+<b>Sending the request</b><pre>function getPersonInfo(selectBox) {
+   var nameToLookup = selectBox.value.split(",");
+   var firstName = nameToLookup[1].substring(1);
+   var lastName  = nameToLookup[0];
+
+   ajaxEngine.sendRequest( 'getPersonInfo',
+                           "firstName=" + firstName,
+                           "lastName=" + lastName );
+}
+</pre>
+   This function is triggered by the onchange of the selectbox to the left.  It simply
+   parses the first & last name from the selected item and passes that information to
+   the back-end request.  The handling of the response is handled by the ajax engine.
+   In this case the response is XML that the engine routes to the formLetterUpdater
+   javascript onbject.<br/><br/>
+   </div>
+   </div>
+</div>
+
+</div>
+
+
+<%= accordion('.accordionTabTitle', '.accordionTabContent', :panelHeight => 339) %>

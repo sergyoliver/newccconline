@@ -1,0 +1,1578 @@
+# Logfile created on Wed Apr 18 19:07:43 CDT 2007 by logger.rb/1.5.2.7
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-04-18 19:07:50) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00149)
+Rendered layouts/_menu (0.00178)
+Rendered layouts/_demo_menu (0.00522)
+Completed in 0.01345 (74 reqs/sec) | Rendering: 0.01231 (91%) | 200 OK [http://localhost/demos]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-04-18 19:07:50) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"undefinedricoCommon.js"}
+Redirected to http://localhost:3000/demos/undefinedricoCommon.js
+Completed in 0.00149 (669 reqs/sec) | 302 Found [http://localhost/undefinedricoCommon.js]
+
+
+Processing DemosController#undefinedricoCommon.js (for 127.0.0.1 at 2007-04-18 19:07:50) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"undefinedricoCommon.js", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedricoCommon.js):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:18
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing RicoController#map_to_rico (for 127.0.0.1 at 2007-04-18 19:11:58) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"map_to_rico", "controller"=>"rico", "page"=>"home.page"}
+Redirected to http://localhost:3000/rico/home.page
+Completed in 0.00126 (794 reqs/sec) | 302 Found [http://localhost/rico]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-04-18 19:11:58) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/index_content
+Rendered layouts/_header (0.00104)
+Rendered layouts/_menu (0.00057)
+Completed in 0.05935 (16 reqs/sec) | Rendering: 0.00811 (13%) | 200 OK [http://localhost/rico/home.page]
+
+
+Processing RicoController#undefinedricoCommon.js (for 127.0.0.1 at 2007-04-18 19:11:58) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"undefinedricoCommon.js", "controller"=>"rico"}
+
+
+ActionController::UnknownAction (No action responded to undefinedricoCommon.js):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:18
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-04-18 19:12:56) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00110)
+Rendered layouts/_menu (0.00058)
+Rendered layouts/_demo_menu (0.00265)
+Completed in 0.00757 (132 reqs/sec) | Rendering: 0.00648 (85%) | 200 OK [http://localhost/demos]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-04-18 19:12:57) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"undefinedricoCommon.js"}
+Redirected to http://localhost:3000/demos/undefinedricoCommon.js
+Completed in 0.00132 (759 reqs/sec) | 302 Found [http://localhost/undefinedricoCommon.js]
+
+
+Processing DemosController#undefinedricoCommon.js (for 127.0.0.1 at 2007-04-18 19:12:57) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"undefinedricoCommon.js", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedricoCommon.js):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:18
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing RicoController#map_to_rico (for 127.0.0.1 at 2007-04-18 19:13:26) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"map_to_rico", "controller"=>"rico", "page"=>"home.page"}
+Redirected to http://localhost:3000/rico/home.page
+Completed in 0.00129 (777 reqs/sec) | 302 Found [http://localhost/rico]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-04-18 19:13:26) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/index_content
+Rendered layouts/_header (0.00148)
+Rendered layouts/_menu (0.00072)
+Completed in 0.00527 (189 reqs/sec) | Rendering: 0.00398 (75%) | 200 OK [http://localhost/rico/home.page]
+
+
+Processing RicoController#undefinedricoCommon.js (for 127.0.0.1 at 2007-04-18 19:13:26) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"undefinedricoCommon.js", "controller"=>"rico"}
+
+
+ActionController::UnknownAction (No action responded to undefinedricoCommon.js):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:18
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-04-18 19:13:53) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00113)
+Rendered layouts/_menu (0.00077)
+Rendered layouts/_demo_menu (0.00236)
+Completed in 0.00763 (131 reqs/sec) | Rendering: 0.00653 (85%) | 200 OK [http://localhost/demos]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-04-18 19:13:53) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"undefinedricoCommon.js"}
+Redirected to http://localhost:3000/demos/undefinedricoCommon.js
+Completed in 0.00124 (809 reqs/sec) | 302 Found [http://localhost/undefinedricoCommon.js]
+
+
+Processing DemosController#undefinedricoCommon.js (for 127.0.0.1 at 2007-04-18 19:13:53) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"undefinedricoCommon.js", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedricoCommon.js):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:18
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing RicoController#map_to_rico (for 127.0.0.1 at 2007-04-18 19:14:28) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"map_to_rico", "controller"=>"rico", "page"=>"home.page"}
+Redirected to http://localhost:3000/rico/home.page
+Completed in 0.00136 (735 reqs/sec) | 302 Found [http://localhost/rico]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-04-18 19:14:28) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/index_content
+Rendered layouts/_header (0.00131)
+Rendered layouts/_menu (0.00070)
+Completed in 0.00447 (223 reqs/sec) | Rendering: 0.00322 (71%) | 200 OK [http://localhost/rico/home.page]
+
+
+Processing RicoController#undefinedricoCommon.js (for 127.0.0.1 at 2007-04-18 19:14:28) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"undefinedricoCommon.js", "controller"=>"rico"}
+
+
+ActionController::UnknownAction (No action responded to undefinedricoCommon.js):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:18
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-04-18 19:17:08) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00125)
+Rendered layouts/_menu (0.00063)
+Rendered layouts/_demo_menu (0.00224)
+Completed in 0.00754 (132 reqs/sec) | Rendering: 0.00634 (84%) | 200 OK [http://localhost/demos]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-04-18 19:17:09) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"undefinedricoCommon.js"}
+Redirected to http://localhost:3000/demos/undefinedricoCommon.js
+Completed in 0.00148 (675 reqs/sec) | 302 Found [http://localhost/undefinedricoCommon.js]
+
+
+Processing DemosController#undefinedricoCommon.js (for 127.0.0.1 at 2007-04-18 19:17:09) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"undefinedricoCommon.js", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedricoCommon.js):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:18
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing RicoController#map_to_rico (for 127.0.0.1 at 2007-04-18 19:17:16) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"map_to_rico", "controller"=>"rico", "page"=>"home.page"}
+Redirected to http://localhost:3000/rico/home.page
+Completed in 0.00125 (802 reqs/sec) | 302 Found [http://localhost/rico]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-04-18 19:17:16) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/index_content
+Rendered layouts/_header (0.00107)
+Rendered layouts/_menu (0.00057)
+Completed in 0.00381 (262 reqs/sec) | Rendering: 0.00276 (72%) | 200 OK [http://localhost/rico/home.page]
+
+
+Processing RicoController#undefinedricoCommon.js (for 127.0.0.1 at 2007-04-18 19:17:16) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"undefinedricoCommon.js", "controller"=>"rico"}
+
+
+ActionController::UnknownAction (No action responded to undefinedricoCommon.js):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/bin/mongrel_rails:18
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-04-18 19:28:31) [GET]
+  Session ID: 5e2590f4581b616db09bba39711fc623
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00108)
+Rendered layouts/_menu (0.00061)
+Rendered layouts/_demo_menu (0.00243)
+Completed in 0.00738 (135 reqs/sec) | Rendering: 0.00625 (84%) | 200 OK [http://localhost/demos]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-04-23 20:39:38) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/index_content
+Rendered layouts/_header (0.01137)
+Rendered layouts/_menu (0.01174)
+Completed in 0.03274 (30 reqs/sec) | Rendering: 0.03127 (95%) | 200 OK [http://localhost/]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-04-23 20:39:45) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"demos.weather_demo"}
+Redirected to http://localhost:4000/demos/demos.weather_demo
+Completed in 0.00153 (654 reqs/sec) | 302 Found [http://localhost/demos.weather_demo]
+
+
+Processing DemosController#demos.weather_demo (for 127.0.0.1 at 2007-04-23 20:39:45) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"action"=>"demos.weather_demo", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to demos.weather_demo):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:21:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-04-23 20:39:47) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"demo"=>"accordion", "action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered demos/_accordion (0.01441)
+Rendered layouts/_header (0.00111)
+Rendered layouts/_menu (0.00064)
+Rendered layouts/_demo_menu (0.02008)
+Completed in 0.07769 (12 reqs/sec) | Rendering: 0.07660 (98%) | 200 OK [http://localhost/demos?demo=accordion]
+
+
+Processing DemosController#demos (for 127.0.0.1 at 2007-04-23 20:39:57) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"action"=>"demos", "id"=>"weather_demo", "controller"=>"demos"}
+Rendering  within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00108)
+Rendered layouts/_menu (0.00055)
+Rendered layouts/_demo_menu (0.00212)
+Completed in 0.00680 (147 reqs/sec) | Rendering: 0.00562 (82%) | 200 OK [http://localhost/demos/demos/weather_demo]
+
+
+Processing WeatherDemoController#index (for 127.0.0.1 at 2007-04-23 20:40:05) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"action"=>"index", "controller"=>"weather_demo"}
+Rendering  within layouts/demos
+Rendering weather_demo/index
+Rendered layouts/_header (0.00139)
+Rendered layouts/_menu (0.00074)
+Rendered layouts/_demo_menu (0.00298)
+Completed in 0.03223 (31 reqs/sec) | Rendering: 0.03100 (96%) | 200 OK [http://localhost/demos/weather_demo]
+
+
+Processing RicoController#map_to_rico (for 127.0.0.1 at 2007-04-23 20:40:22) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"action"=>"map_to_rico", "controller"=>"rico", "page"=>"home.page"}
+Redirected to http://localhost:4000/rico/home.page
+Completed in 0.00127 (788 reqs/sec) | 302 Found [http://localhost/rico]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-04-23 20:40:22) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/index_content
+Rendered layouts/_header (0.00133)
+Rendered layouts/_menu (0.00072)
+Completed in 0.01044 (95 reqs/sec) | Rendering: 0.00913 (87%) | 200 OK [http://localhost/rico/home.page]
+
+
+Processing RicoController#demos (for 127.0.0.1 at 2007-04-23 20:40:24) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"action"=>"demos", "id"=>"weather_demo", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/demos
+Rendered layouts/_header (0.00109)
+Rendered layouts/_menu (0.00069)
+Completed in 0.09526 (10 reqs/sec) | Rendering: 0.09395 (98%) | 200 OK [http://localhost/rico/demos/weather_demo]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-04-23 20:40:29) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/index_content
+Rendered layouts/_header (0.00117)
+Rendered layouts/_menu (0.00064)
+Completed in 0.00543 (184 reqs/sec) | Rendering: 0.00427 (78%) | 200 OK [http://localhost/rico/home.page]
+
+
+Processing RicoController#demos (for 127.0.0.1 at 2007-04-23 20:40:31) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"action"=>"demos", "id"=>"weather_demo", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/demos
+Rendered layouts/_header (0.00107)
+Rendered layouts/_menu (0.00109)
+Completed in 0.00453 (220 reqs/sec) | Rendering: 0.00339 (74%) | 200 OK [http://localhost/rico/demos/weather_demo]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-04-23 20:40:46) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/index_content
+Rendered layouts/_header (0.00111)
+Rendered layouts/_menu (0.00059)
+Completed in 0.00906 (110 reqs/sec) | Rendering: 0.00796 (87%) | 200 OK [http://localhost/rico/home.page]
+
+
+Processing WeatherDemoController#index (for 127.0.0.1 at 2007-04-23 20:40:48) [GET]
+  Session ID: 1429cbdcfdb73df44c3cd47f1c0f801e
+  Parameters: {"action"=>"index", "controller"=>"weather_demo"}
+Rendering  within layouts/demos
+Rendering weather_demo/index
+Rendered layouts/_header (0.00104)
+Rendered layouts/_menu (0.00058)
+Rendered layouts/_demo_menu (0.00209)
+Completed in 0.00732 (136 reqs/sec) | Rendering: 0.00620 (84%) | 200 OK [http://localhost/demos/weather_demo]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-05-14 21:02:08) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/index_content
+Rendered layouts/_header (0.00246)
+Rendered layouts/_menu (0.00300)
+Completed in 0.10085 (9 reqs/sec) | Rendering: 0.09944 (98%) | 200 OK [http://localhost/]
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:05:30) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00203)
+Rendered layouts/_menu (0.00234)
+Rendered layouts/_demo_menu (0.00773)
+Completed in 0.03787 (26 reqs/sec) | Rendering: 0.03666 (96%) | 200 OK [http://localhost/]
+
+
+Processing AjaxDemoController#inner_ajax_HTML (for 127.0.0.1 at 2007-05-14 21:05:33) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"inner_ajax_HTML", "controller"=>"ajax_demo"}
+Rendering  within layouts/demos
+Rendering ajax_demo/inner_ajax_HTML
+Rendered layouts/_header (0.00114)
+Rendered layouts/_menu (0.00066)
+Rendered layouts/_demo_menu (0.00237)
+Completed in 0.01543 (64 reqs/sec) | Rendering: 0.01403 (90%) | 200 OK [http://localhost/inner_ajax_HTML]
+
+
+Processing AjaxDemoController#complex_ajax (for 127.0.0.1 at 2007-05-14 21:05:35) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"complex_ajax", "controller"=>"ajax_demo"}
+Rendering  within layouts/demos
+Rendering ajax_demo/complex_ajax
+Rendered layouts/_header (0.00099)
+Rendered layouts/_menu (0.00062)
+Rendered layouts/_demo_menu (0.00216)
+Completed in 0.02180 (45 reqs/sec) | Rendering: 0.02056 (94%) | 200 OK [http://localhost/complex_ajax]
+
+
+Processing AjaxDemoController#ajax_person_info_xml (for 127.0.0.1 at 2007-05-14 21:05:37) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"lastName"=>"Dampier", "action"=>"ajax_person_info_xml", "firstName"=>"Joan", "controller"=>"ajax_demo"}
+Rendering ajax_demo/ajax_person_info_xml
+Completed in 0.00511 (195 reqs/sec) | Rendering: 0.00210 (41%) | 200 OK [http://localhost/ajax_demo/ajax_person_info_xml?firstName=Joan&lastName=Dampier]
+
+
+Processing AjaxDemoController#ajax_person_info_xml (for 127.0.0.1 at 2007-05-14 21:05:37) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"lastName"=>"Hardoway", "action"=>"ajax_person_info_xml", "firstName"=>"Kimber", "controller"=>"ajax_demo"}
+Rendering ajax_demo/ajax_person_info_xml
+Completed in 0.00238 (419 reqs/sec) | Rendering: 0.00053 (22%) | 200 OK [http://localhost/ajax_demo/ajax_person_info_xml?firstName=Kimber&lastName=Hardoway]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:05:38) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"demo"=>"drag_and_drop_simple", "action"=>"demo", "controller"=>"demos"}
+Redirected to http://localhost:3000/?demo=drag_and_drop_simple
+Completed in 0.00148 (677 reqs/sec) | 302 Found [http://localhost/demos/demo?demo=drag_and_drop_simple]
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:05:39) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"demo"=>"drag_and_drop_simple", "action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered demos/_drag_and_drop_simple (0.00422)
+Rendered layouts/_header (0.00129)
+Rendered layouts/_menu (0.00084)
+Rendered layouts/_demo_menu (0.00285)
+Completed in 0.01298 (77 reqs/sec) | Rendering: 0.01183 (91%) | 200 OK [http://localhost/?demo=drag_and_drop_simple]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:05:42) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"demo"=>"drag_and_drop_custom_dropzone", "action"=>"demo", "controller"=>"demos"}
+Redirected to http://localhost:3000/?demo=drag_and_drop_custom_dropzone
+Completed in 0.00115 (866 reqs/sec) | 302 Found [http://localhost/demos/demo?demo=drag_and_drop_custom_dropzone]
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:05:43) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"demo"=>"drag_and_drop_custom_dropzone", "action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered demos/_drag_and_drop_custom_dropzone (0.01154)
+Rendered layouts/_header (0.00127)
+Rendered layouts/_menu (0.00080)
+Rendered layouts/_demo_menu (0.00287)
+Completed in 0.02031 (49 reqs/sec) | Rendering: 0.01920 (94%) | 200 OK [http://localhost/?demo=drag_and_drop_custom_dropzone]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:05:51) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"demo"=>"effect_animation", "action"=>"demo", "controller"=>"demos"}
+Redirected to http://localhost:3000/?demo=effect_animation
+Completed in 0.00123 (813 reqs/sec) | 302 Found [http://localhost/demos/demo?demo=effect_animation]
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:05:51) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"demo"=>"effect_animation", "action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered demos/_effect_animation (0.01139)
+Rendered layouts/_header (0.00151)
+Rendered layouts/_menu (0.00083)
+Rendered layouts/_demo_menu (0.00291)
+Completed in 0.02058 (48 reqs/sec) | Rendering: 0.01965 (95%) | 200 OK [http://localhost/?demo=effect_animation]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:05:56) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"demo"=>"effect_round", "action"=>"demo", "controller"=>"demos"}
+Redirected to http://localhost:3000/?demo=effect_round
+Completed in 0.00131 (763 reqs/sec) | 302 Found [http://localhost/demos/demo?demo=effect_round]
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:05:56) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"demo"=>"effect_round", "action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered demos/_effect_round (0.00414)
+Rendered layouts/_header (0.00131)
+Rendered layouts/_menu (0.00086)
+Rendered layouts/_demo_menu (0.00297)
+Completed in 0.01354 (73 reqs/sec) | Rendering: 0.01237 (91%) | 200 OK [http://localhost/?demo=effect_round]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:05:56) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"demo"=>"color", "action"=>"demo", "controller"=>"demos"}
+Redirected to http://localhost:3000/?demo=color
+Completed in 0.00121 (823 reqs/sec) | 302 Found [http://localhost/demos/demo?demo=color]
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:05:56) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"demo"=>"color", "action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered demos/_color (0.00518)
+Rendered layouts/_header (0.00124)
+Rendered layouts/_menu (0.00077)
+Rendered layouts/_demo_menu (0.00296)
+Completed in 0.01399 (71 reqs/sec) | Rendering: 0.01276 (91%) | 200 OK [http://localhost/?demo=color]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:05:57) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"demo"=>"accordion", "action"=>"demo", "controller"=>"demos"}
+Redirected to http://localhost:3000/?demo=accordion
+Completed in 0.00148 (675 reqs/sec) | 302 Found [http://localhost/demos/demo?demo=accordion]
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:05:57) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"demo"=>"accordion", "action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered demos/_accordion (0.00411)
+Rendered layouts/_header (0.00101)
+Rendered layouts/_menu (0.00060)
+Rendered layouts/_demo_menu (0.00275)
+Completed in 0.01160 (86 reqs/sec) | Rendering: 0.01065 (91%) | 200 OK [http://localhost/?demo=accordion]
+
+
+Processing WeatherDemoController#index (for 127.0.0.1 at 2007-05-14 21:06:02) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"index", "controller"=>"weather_demo"}
+Rendering  within layouts/demos
+Rendering weather_demo/index
+Rendered layouts/_header (0.00125)
+Rendered layouts/_menu (0.00078)
+Rendered layouts/_demo_menu (0.00243)
+Completed in 0.02221 (45 reqs/sec) | Rendering: 0.02128 (95%) | 200 OK [http://localhost/weather_demo]
+
+
+Processing WeatherDemoController#ajax_weather_info (for 127.0.0.1 at 2007-05-14 21:06:09) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"zip"=>"78746", "action"=>"ajax_weather_info", "controller"=>"weather_demo"}
+Rendering weather_demo/ajax_weather_info
+Rendered weather_demo/_weather_content (0.03594)
+Rendered weather_demo/_moon_content (0.00653)
+Rendered weather_demo/_sun_content (0.01659)
+Rendered weather_demo/_sponsored_links (0.01365)
+Completed in 0.32386 (3 reqs/sec) | Rendering: 0.07715 (23%) | 200 OK [http://localhost/weather_demo/ajax_weather_info?zip=78746]
+
+
+Processing LivegridDemoController#index (for 127.0.0.1 at 2007-05-14 21:06:11) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"index", "controller"=>"livegrid_demo"}
+Rendering  within layouts/demos
+Rendering livegrid_demo/index
+Rendered layouts/_header (0.00138)
+Rendered layouts/_menu (0.00071)
+Rendered layouts/_demo_menu (0.08274)
+Completed in 0.10825 (9 reqs/sec) | Rendering: 0.10700 (98%) | 200 OK [http://localhost/livegrid]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:06:12) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"undefinedshadow.png"}
+Redirected to http://localhost:3000/demos/undefinedshadow.png
+Completed in 0.00130 (771 reqs/sec) | 302 Found [http://localhost/undefinedshadow.png]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:06:12) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"undefinedshadow_ur.png"}
+Redirected to http://localhost:3000/demos/undefinedshadow_ur.png
+Completed in 0.00129 (776 reqs/sec) | 302 Found [http://localhost/undefinedshadow_ur.png]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:06:12) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"undefinedshadow_ll.png"}
+Redirected to http://localhost:3000/demos/undefinedshadow_ll.png
+Completed in 0.00129 (777 reqs/sec) | 302 Found [http://localhost/undefinedshadow_ll.png]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:06:12) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"undefinedfiltercol.gif"}
+Redirected to http://localhost:3000/demos/undefinedfiltercol.gif
+Completed in 0.00149 (669 reqs/sec) | 302 Found [http://localhost/undefinedfiltercol.gif]
+
+
+Processing LivegridDemoController#ajax_livegrid_content (for 127.0.0.1 at 2007-05-14 21:06:12) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"ajax_livegrid_content", "id"=>"data_grid", "page_size"=>"77", "controller"=>"livegrid_demo", "offset"=>"0", "get_total"=>"true"}
+  [4;36;1mMovie Load (0.055112)[0m   [0;1mSELECT * FROM movies ORDER BY id LIMIT 0, 77[0m
+  [4;35;1mMovie Columns (0.002518)[0m   [0mSHOW FIELDS FROM movies[0m
+  [4;36;1mSQL (0.000824)[0m   [0;1mSELECT count(*) AS count_all FROM movies [0m
+Rendering livegrid_demo/ajax_livegrid_content
+Completed in 0.21244 (4 reqs/sec) | Rendering: 0.02004 (9%) | DB: 0.05845 (27%) | 200 OK [http://localhost/livegrid_demo/ajax_livegrid_content?id=data_grid&page_size=77&offset=0&get_total=true]
+
+
+Processing DemosController#undefinedshadow.png (for 127.0.0.1 at 2007-05-14 21:06:13) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"undefinedshadow.png", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedshadow.png):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#undefinedshadow_ur.png (for 127.0.0.1 at 2007-05-14 21:06:13) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"undefinedshadow_ur.png", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedshadow_ur.png):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#undefinedshadow_ll.png (for 127.0.0.1 at 2007-05-14 21:06:13) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"undefinedshadow_ll.png", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedshadow_ll.png):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#undefinedfiltercol.gif (for 127.0.0.1 at 2007-05-14 21:06:13) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"undefinedfiltercol.gif", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedfiltercol.gif):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:06:13) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"undefinedsort_asc.gif"}
+Redirected to http://localhost:3000/demos/undefinedsort_asc.gif
+Completed in 0.00126 (794 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/undefinedsort_asc.gif]
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:06:14) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"undefinedsort_desc.gif"}
+Redirected to http://localhost:3000/demos/undefinedsort_desc.gif
+Completed in 0.00131 (763 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/undefinedsort_desc.gif]
+
+
+Processing DemosController#undefinedsort_asc.gif (for 127.0.0.1 at 2007-05-14 21:06:14) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"undefinedsort_asc.gif", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedsort_asc.gif):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#undefinedsort_desc.gif (for 127.0.0.1 at 2007-05-14 21:06:14) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"undefinedsort_desc.gif", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedsort_desc.gif):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:06:14) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"undefinedresize.gif"}
+Redirected to http://localhost:3000/demos/undefinedresize.gif
+Completed in 0.00110 (910 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/undefinedresize.gif]
+
+
+Processing DemosController#undefinedresize.gif (for 127.0.0.1 at 2007-05-14 21:06:14) [GET]
+  Session ID: 796f82e99b0361e71aed233a163545af
+  Parameters: {"action"=>"undefinedresize.gif", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedresize.gif):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#demo (for 127.0.0.1 at 2007-05-14 21:24:56) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"demo", "controller"=>"demos", "page"=>"livegrid"}
+Redirected to http://localhost:3000/demos/livegrid
+Completed in 0.00145 (691 reqs/sec) | 302 Found [http://localhost/livegrid]
+
+
+Processing LivegridDemoController#index (for 127.0.0.1 at 2007-05-14 21:24:56) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index", "controller"=>"livegrid_demo"}
+Rendering  within layouts/demos
+Rendering livegrid_demo/index
+Rendered layouts/_header (0.00183)
+Rendered layouts/_menu (0.00184)
+Rendered layouts/_demo_menu (0.00583)
+Completed in 0.01834 (54 reqs/sec) | Rendering: 0.01739 (94%) | 200 OK [http://localhost/demos/livegrid]
+
+
+Processing DemosController#undefinedshadow.png (for 127.0.0.1 at 2007-05-14 21:24:56) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"undefinedshadow.png", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedshadow.png):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#undefinedshadow_ur.png (for 127.0.0.1 at 2007-05-14 21:24:56) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"undefinedshadow_ur.png", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedshadow_ur.png):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#undefinedshadow_ll.png (for 127.0.0.1 at 2007-05-14 21:24:57) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"undefinedshadow_ll.png", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedshadow_ll.png):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing LivegridDemoController#ajax_livegrid_content (for 127.0.0.1 at 2007-05-14 21:24:57) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"ajax_livegrid_content", "id"=>"data_grid", "page_size"=>"77", "controller"=>"livegrid_demo", "offset"=>"0", "get_total"=>"true"}
+  [4;36;1mMovie Load (0.000903)[0m   [0;1mSELECT * FROM movies ORDER BY id LIMIT 0, 77[0m
+  [4;35;1mMovie Columns (0.002161)[0m   [0mSHOW FIELDS FROM movies[0m
+  [4;36;1mSQL (0.000831)[0m   [0;1mSELECT count(*) AS count_all FROM movies [0m
+Rendering livegrid_demo/ajax_livegrid_content
+Completed in 0.12038 (8 reqs/sec) | Rendering: 0.06848 (56%) | DB: 0.00389 (3%) | 200 OK [http://localhost/livegrid_demo/ajax_livegrid_content?id=data_grid&page_size=77&offset=0&get_total=true]
+
+
+Processing DemosController#undefinedfiltercol.gif (for 127.0.0.1 at 2007-05-14 21:24:57) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"undefinedfiltercol.gif", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedfiltercol.gif):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#undefinedsort_asc.gif (for 127.0.0.1 at 2007-05-14 21:24:57) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"undefinedsort_asc.gif", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedsort_asc.gif):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#undefinedsort_desc.gif (for 127.0.0.1 at 2007-05-14 21:24:57) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"undefinedsort_desc.gif", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedsort_desc.gif):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#undefinedresize.gif (for 127.0.0.1 at 2007-05-14 21:24:58) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"undefinedresize.gif", "controller"=>"demos"}
+
+
+ActionController::UnknownAction (No action responded to undefinedresize.gif):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:25:02) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00142)
+Rendered layouts/_menu (0.00069)
+Rendered layouts/_demo_menu (0.00278)
+Completed in 0.00893 (111 reqs/sec) | Rendering: 0.00781 (87%) | DB: 0.00000 (0%) | 200 OK [http://localhost/demos]
+
+
+Processing RicoController#map_to_rico (for 127.0.0.1 at 2007-05-14 21:25:15) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"map_to_rico", "controller"=>"rico", "page"=>"home.page"}
+Redirected to http://localhost:3000/rico/home.page
+Completed in 0.00119 (843 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/rico]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-05-14 21:25:15) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/index_content
+Rendered layouts/_header (0.00118)
+Rendered layouts/_menu (0.00061)
+Completed in 0.01030 (97 reqs/sec) | Rendering: 0.00900 (87%) | DB: 0.00000 (0%) | 200 OK [http://localhost/rico/home.page]
+
+
+Processing Base#index (for 127.0.0.1 at 2007-05-14 21:25:17) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {}
+
+
+NameError (uninitialized constant DownloadsController):
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:123:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:131:in `const_missing'
+    generated/routing/recognition.rb:33:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/routing.rb:511:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:26:17) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00117)
+Rendered layouts/_menu (0.00058)
+Rendered layouts/_demo_menu (0.00221)
+Completed in 0.00719 (139 reqs/sec) | Rendering: 0.00609 (84%) | DB: 0.00000 (0%) | 200 OK [http://localhost/demos]
+
+
+Processing RicoController#map_to_rico (for 127.0.0.1 at 2007-05-14 21:26:20) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"map_to_rico", "controller"=>"rico", "page"=>"home.page"}
+Redirected to http://localhost:3000/rico/home.page
+Completed in 0.00120 (832 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/rico]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-05-14 21:26:20) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+Rendering  within layouts/main
+Rendering rico/index_content
+
+
+Processing Base#index (for 127.0.0.1 at 2007-05-14 21:26:25) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {}
+
+
+NameError (uninitialized constant DownloadsController):
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:123:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:131:in `const_missing'
+    generated/routing/recognition.rb:33:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/routing.rb:511:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing RicoController#map_to_rico (for 127.0.0.1 at 2007-05-14 21:28:01) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"map_to_rico", "controller"=>"rico", "page"=>"home.page"}
+Redirected to http://localhost:3000/rico/home.page
+Completed in 0.00156 (640 reqs/sec) | 302 Found [http://localhost/rico]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-05-14 21:28:01) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+
+
+ActionController::UnknownAction (No action responded to index_content):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:29:12) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00173)
+Rendered layouts/_menu (0.00163)
+Rendered layouts/_demo_menu (0.00597)
+Completed in 0.01419 (70 reqs/sec) | Rendering: 0.01303 (91%) | 200 OK [http://localhost/demos]
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:29:52) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00149)
+Rendered layouts/_menu (0.00282)
+Rendered layouts/_demo_menu (0.00287)
+Completed in 0.01094 (91 reqs/sec) | Rendering: 0.00971 (88%) | 200 OK [http://localhost/demos]
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-05-14 21:31:14) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+
+
+ActionController::UnknownAction (No action responded to index_content):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing RicoController#index_content (for 127.0.0.1 at 2007-05-14 21:31:17) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index_content", "controller"=>"rico"}
+
+
+ActionController::UnknownAction (No action responded to index_content):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:31:59) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00189)
+Rendered layouts/_menu (0.00188)
+Rendered layouts/_demo_menu (0.00556)
+Completed in 0.01471 (67 reqs/sec) | Rendering: 0.01355 (92%) | 200 OK [http://localhost/]
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:32:42) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00115)
+
+
+ActionView::TemplateError (wrong number of arguments (3 for 2)) on line #12 of app/views/layouts/_menu.rhtml:
+9: <div id="menu" style="padding-top:5px;padding-bottom:5px" class="menuBox roundNormal">
+10:    <span class="leftPadding">
+11: 	       <a id="homeLink"      class="menuLink" href="http://openrico.org/">Home</a>
+12:        <%=menu_link "Demos", url_for(:controller=>"demos"), :class => 'selected' %>
+13: 	       <a id="downloadsLink" class="menuLink" href="http://openrico.org/downloads.page">Downloads</a>
+14:        
+15: 	   <a id="weblogLink"      class="menuLink" href="http://weblog.openrico.org/">Weblog</a>
+
+    #{RAILS_ROOT}/app/views/layouts/_menu.rhtml:12:in `menu_link'
+    #{RAILS_ROOT}/app/views/layouts/_menu.rhtml:12:in `_run_rhtml_layouts__menu'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_view/base.rb:316:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_view/base.rb:292:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_view/base.rb:251:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_view/base.rb:266:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_view/partials.rb:59:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:29:in `benchmark'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/1.8/benchmark.rb:307:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:29:in `benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_view/partials.rb:58:in `render_partial'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_view/base.rb:278:in `render'
+    #{RAILS_ROOT}/app/views/layouts/demos.rhtml:11:in `_run_rhtml_layouts_demos'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_view/base.rb:316:in `compile_and_render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_view/base.rb:292:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_view/base.rb:251:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:53:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:53:in `render'
+    #{RAILS_ROOT}/app/controllers/demos_controller.rb:9:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:941:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/base.rb:408:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:150:in `process_request'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:54:in `process!'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:600:in `each_cgi'
+    /usr/local/lib/ruby/site_ruby/1.8/fcgi.rb:597:in `each_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:53:in `process!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.6/lib/fcgi_handler.rb:23:in `process!'
+    /Users/rcdev/project_files/openrico/trunk/demos/public/dispatch.fcgi:24
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.5/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:34:26) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00182)
+Rendered layouts/_menu (0.00189)
+Rendered layouts/_demo_menu (0.00232)
+Completed in 0.00909 (109 reqs/sec) | Rendering: 0.00807 (88%) | 200 OK [http://localhost/]
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 21:34:59) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00117)
+Rendered layouts/_menu (0.00216)
+Rendered layouts/_demo_menu (0.00232)
+Completed in 0.00960 (104 reqs/sec) | Rendering: 0.00849 (88%) | 200 OK [http://localhost/]
+
+
+Processing DemosController#index (for 127.0.0.1 at 2007-05-14 22:31:01) [GET]
+  Session ID: 6ca0514f5b996e9a6be5d7e4bc7a7363
+  Parameters: {"action"=>"index", "controller"=>"demos"}
+Rendering demos/demos within layouts/demos
+Rendering demos/demos
+Rendered layouts/_header (0.00101)
+Rendered layouts/_menu (0.00040)
+Rendered layouts/_demo_menu (0.00220)
+Completed in 0.00648 (154 reqs/sec) | Rendering: 0.00547 (84%) | 200 OK [http://localhost/]
+
+
+Processing WeatherDemoController#index (for 127.0.0.1 at 2007-05-14 23:35:26) [GET]
+  Session ID: aa1e74948b1ee56c7d0f3548dd2a3175
+  Parameters: {"action"=>"index", "controller"=>"weather_demo"}
+Rendering  within layouts/demos
+Rendering weather_demo/index
+Rendered layouts/_header (0.00104)
+Rendered layouts/_menu (0.00040)
+Rendered layouts/_demo_menu (0.00216)
+Completed in 0.01161 (86 reqs/sec) | Rendering: 0.01057 (91%) | 200 OK [http://localhost/weather_demo]
+
+
+Processing WeatherDemoController#ajax_weather_info (for 127.0.0.1 at 2007-05-14 23:35:33) [GET]
+  Session ID: aa1e74948b1ee56c7d0f3548dd2a3175
+  Parameters: {"zip"=>"78746", "action"=>"ajax_weather_info", "controller"=>"weather_demo"}
+Rendering weather_demo/ajax_weather_info
+Rendered weather_demo/_weather_content (0.03426)
+Rendered weather_demo/_moon_content (0.00932)
+Rendered weather_demo/_sun_content (0.02009)
+Rendered weather_demo/_sponsored_links (0.02266)
+Completed in 0.33060 (3 reqs/sec) | Rendering: 0.08997 (27%) | 200 OK [http://localhost/weather_demo/ajax_weather_info?zip=78746]

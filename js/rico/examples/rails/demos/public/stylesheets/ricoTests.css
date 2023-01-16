@@ -1,0 +1,239 @@
+/**
+ *   Global
+ *
+ **/
+
+.statusContainer {
+   background-color : #ffd363;
+}
+
+span.statusMsg {
+   font-family      : Tahoma;
+   font-size        : 11px;
+   font-weight      : bold;
+   margin           : 2px 6px;
+}
+
+span.code {
+   font-family : fixed;
+   font-size   : 11px;
+   color       : #4b4b4b;
+}
+
+span.codeTitle {
+   font-family : Courier;
+   font-size   : 12px;
+}
+
+span.code2 {
+   font-family : Courier;
+   font-size   : 11px;
+   margin      : 12px;
+}
+
+span.code3 {
+   display      : block;
+   font-family  : Courier;
+   font-size    : 11px;
+   padding-left : 12px;
+}
+
+span.bigTitle {
+   font-family : Arial;
+   font-size   : 14px;
+}
+
+div.title {
+   font-family      : Arial;
+   font-size        : 10px;
+   background-color : #797979;
+   color            : #ffffff;
+   width            : 200px;
+   margin           : 1px;
+}
+
+span.title {
+   font-family      : Arial;
+   font-size        : 12px;
+   margin           : 1px;
+}
+
+span.catHeader {
+   font-family : Arial;
+   font-weight : bold;
+   font-size   : 11px;
+   color       : #5b5b5b;
+   margin-left : 8px;
+   margin-top  : 12px;
+   display     : block;
+}
+
+/**.x { display:block; #5b5b5b }
+*/
+.linkBox {
+   padding-top      : 5px;
+   padding-bottom   : 5px;
+   background-color : #cdd7b5;
+	font-family : Trebuchet MS, Arial, Helvetica, sans-serif;
+	font-size   : 11px;
+}
+
+.listBox {
+   padding-top      : 5px;
+   padding-bottom   : 5px;
+   background-color : #ffffff;
+   border           : 1px solid #8b8b8b;
+}
+
+.logBox {
+   padding-top      : 5px;
+   padding-bottom   : 5px;
+   background-color : #ffffee;
+   border           : 1px solid #8b8b8b;
+}
+
+.codeBox {
+   padding-top      : 5px;
+   padding-bottom   : 5px;
+   background-color : #E0DDB5;
+}
+
+.links {
+   font-family      : Arial;
+   font-size        : 10px;
+   text-decoration  : none;
+   margin-bottom    : 0px;
+}
+
+.customDraggable {
+   background-color : #E0DDB5;
+   color            : #5b5b5b;
+   border           : 1px solid #5b5b5b;
+ /*  filter           : alpha(Opacity=70); */
+   -moz-opacity     : 0.7;
+   padding          : 1px 5px 1px 5px;
+}
+/*
+div {
+   scrollbar-face-color        : #cdd7b5;
+   scrollbar-highlight-color   : #dfe5cf;
+   scrollbar-shadow-color      : #cdd7b5;
+   scrollbar-base-color        : #cdd7b5;
+   scrollbar-dark-shadow-color : #cdd7b5;
+   scrollbar-arrow-color       : #255F81;
+   scrollbar-track-color       : #c3d1ac;
+}
+*/
+ /**
+  *   ricoColor.html
+  *
+  **/
+
+.formPanel {
+   background-color : #cdd7b5;
+   width            : 150px;
+}
+
+div.explain-text {
+   width       : 550px;
+   font-family : Arial;
+   font-size   : 14px;
+   padding     : 8px
+}
+
+span.label {
+   font-family : Arial;
+   font-size   : 13px;
+}
+
+#colorBox {
+   height : 5px;
+}
+
+input.field {
+   border-top       : 0px solid #ffffff;
+   border-left      : 0px solid #8b8b8b;
+   border-bottom    : 1px solid #cedbc1;
+   border-right     : 1px solid #cedbc1;
+   background-color : #eef1e5;
+   text-align       : right;
+}
+
+/**
+ *  dragAndDropSimple.html
+ *
+ **/
+
+div.box {
+   font-family   : Arial;
+   font-size     : 14px;
+   width         : 100px;
+   height        : 40px;
+/*   cursor        : hand; */
+   text-align    : center;
+   border-bottom : 1px solid #6b6b6b;
+   border-right  : 1px solid #6b6b6b;
+}
+
+div.panel {
+   width    : 200px;
+   height   : 80px;
+   padding  : 2px;
+   border   : 1px solid #5b5b5b;
+}
+
+div.explanation {
+   font-family      : Arial;
+   font-size        : 12px;
+   width            : 600px;
+   background-color : #cdd7b5;
+}
+
+span.logMsg {
+   display      : block;
+   font-family  : Verdana;
+   font-size    : 10px;
+}
+
+/**
+ *  ricoCorner.html
+ *
+ **/
+div.cornerSamples {
+   width            : 440px;
+   margin-top       : 4px;
+   background-color : #ffffee;
+   font-family      : Arial;
+   font-size        : 11px;
+   text-align       : left;
+}
+
+/**
+ * ricoEffectSize.html
+ *
+ *
+ **/
+div.sizeMe {
+   width            : 120px;
+   padding-top      : 5px;
+   padding-bottom   : 5px;
+   background-color : #c6c3de;
+   font-family      : Arial;
+   font-size        : 11px;
+   text-align       : center;
+}
+
+/**
+ * ricoDragAndDripCustomDraggable.html
+ *
+ **/
+span.nameSpan {
+   font-family  : Verdana;
+   font-size    : 11px;
+}
+
+div.customDropZone {
+   background-color : #c6c3de;
+   font-family      : Verdana;
+   font-size        : 10px;
+}

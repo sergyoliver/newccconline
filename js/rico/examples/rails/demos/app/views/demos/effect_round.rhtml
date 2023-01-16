@@ -1,0 +1,47 @@
+<script>
+   var rounded = false;
+   function roundMe() {
+      if ( !rounded )
+        $$('div.roundme').each(function(e){Rico.Corner.round(e)});
+      setStatus('consider yourself well rounded ;)',1500);
+      rounded = true;
+   }
+
+   function setStatus(s,n) {
+      $('statusContainer').style.visibility = "visible";
+      $('statusMsg').innerHTML = s;
+      setTimeout( "$('statusContainer').style.visibility = 'hidden';", n );
+   }
+</script>
+
+<span class="header">Rico.Effect.Round</span>
+<br/>
+
+<span class="codeTitle">new Rico.Effect.Round( tagName, className, options)</span>
+
+<table><tr><td>
+<div id="statusContainer" class="statusContainer">
+  <span class="statusMsg" id="statusMsg">x</span>
+</div>
+</td></tr></table>
+<div id="test" class="roundme linkBox" style="width:450px;background-color:#c6c3de;padding-top:7px;padding-bottom:6px">
+<div style="margin:3px 7px">
+<a href="javascript:roundMe()"><span class="code indentedLine"><b>Click here to round the text block.</b></span></a>
+<br/>
+Morbi eu justo. Sed ultrices urna. Phasellus nec ligula tincidunt mauris eleifend dignissim.
+Donec lobortis ultricies augue. Phasellus scelerisque, quam non luctus iaculis, arcu turpis ultricies sem,
+ac convallis nulla pede vitae libero. Curabitur egestas felis ut lorem. Donec ornare ligula vitae nunc.
+Quisque aliquam justo et est. Ut massa leo, dictum at, porta in, vledum
+dictum et, quam. Phasellus pulvinar urna quis diam. Etiam non leo eu nunc pharetra laoreet. Maecenas dignissim
+leo nec tellus. In quis velit a arcu ornare semper. Sed sem lectus, pharetra eget, tincidunt vel, nonummy eu,
+arcu. Mauris dictum wisi non mauris.  Nam sit amet orci ut leo cursus scelerisque. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit.  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+Curae; Nullam sodales porta orci.
+</div>
+</div>
+
+
+<%= javascript_tag %{
+   Rico.Corner.round('statusContainer', {compact:true});
+   $('statusContainer').style.visibility = "hidden";
+}%>

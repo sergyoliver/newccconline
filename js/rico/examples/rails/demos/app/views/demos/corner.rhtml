@@ -1,0 +1,59 @@
+<span class="header">Rico.Corner EXAMPLES&nbsp;</span>
+
+<div id="outer" style="background-color:#1e4552">
+<table cellspacing="3" cellpadding="3" >
+
+<tr>
+<td style="background-color:#1e4552" colspan="2" style="background-color:#1e4552"><div id="a0" class="cornerSamples"><span class="code2">Rico.Corner.round(element);<br/><br/><br/><br/></span></div></td>
+</tr>
+
+<tr>
+<td style="background-color:#1e4552"><div id="a" class="cornerSamples"><span class="code2">Rico.Corner.round(element, {compact:true});<br/><br/><br/><br/></span></div></td>
+<td style="background-color:#1e4552"><div id="b" class="cornerSamples"><span class="code2">Rico.Corner.round(element, {blend:false});<br/><br/><br/><br/></span></div></td>
+</tr>
+
+<tr>
+<td style="background-color:#1e4552"><div id="c" class="cornerSamples"><span class="code2">Rico.Corner.round(element, {blend:false,compact:true});<br/><br/><br/><br/></span></div></td>
+<td style="background-color:#1e4552"><div id="d" class="cornerSamples"><span class="code2">Rico.Corner.round(element, {corners:"tl"});<br/><br/><br/><br/></span></div></td>
+</tr>
+
+<tr>
+<td style="background-color:#1e4552"><div id="e" class="cornerSamples"><span class="code2">Rico.Corner.round(element, {corners:"br"});<br/><br/><br/><br/></span></div></td>
+<td style="background-color:#1e4552"><div id="f" class="cornerSamples"><span class="code2">Rico.Corner.round(element, {corners:"top"});<br/><br/><br/><br/></span></div></td>
+</tr>
+
+<tr>
+<td style="background-color:#1e4552"><div id="g" class="cornerSamples"><span class="code2">Rico.Corner.round(element, {corners:"bottom"});<br/><br/><br/><br/></span></div></td>
+<td style="background-color:#1e4552"><div id="h" class="cornerSamples"><span class="code2">Rico.Corner.round(element, {corners:"tl br"});<br/><br/><br/><br/></span></div></td>
+</tr>
+
+<tr>
+<td style="background-color:#1e4552"><div id="i" class="cornerSamples" style="background-image:url(/images/gradient.jpg)"><span class="code2">Rico.Corner.round(element, {color:"transparent"}</span><br/><br/><br/><br/></div></td>
+<td style="background-color:#1e4552"><div id="j" class="cornerSamples" style="background-image:url(/images/gradient.jpg)"><span class="code2">Rico.Corner.round(element, {color:"transparent",compact:true}</span><br/><br/><br/><br/></div></td>
+</tr>
+
+<tr>
+<td style="background-color:#1e4552"><div id="l" class="cornerSamples"><span class="code3">Rico.Corner.round(element, {border: '#00ff00'});<br/><br/><br/><br/></span></div></td>
+<td style="background-color:#1e4552"><div id="m" class="cornerSamples"><span class="code3">Rico.Corner.round(element, {border: '#00ff00',compact:true});<br/><br/><br/><br/></span></div></td>
+</tr>
+
+</table>
+</div>
+
+<script>
+   var roundCorners = Rico.Corner.round.bind(Rico.Corner);
+   roundCorners('a0');
+   roundCorners('a',{compact:true});
+   roundCorners('b',{blend:false});
+   roundCorners('c',{blend:false,compact:true});
+   roundCorners('d',{corners:"tl"});
+   roundCorners('e',{corners:"br"});
+   roundCorners('f',{corners:"top"});
+   roundCorners('g',{corners:"bottom"});
+   roundCorners('h',{corners:"tl br"});
+   roundCorners('i',{corners:"all", color: "transparent"});
+   roundCorners('j',{corners:"all", compact:true, color: "transparent"});
+   roundCorners('l',{corners:"all", border: '#00ff00'});
+   roundCorners('m',{corners:"all", border: '#00ff00', compact:true});
+   roundCorners('outer');
+</script>

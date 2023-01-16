@@ -1,0 +1,129 @@
+
+<%= javascript_include_tag  "ricoDragAndDropCustomDraggable"%>
+
+<span class="header">CUSTOM DRAGGABLE EXAMPLE&nbsp;</span>
+
+<span class="catHeader">the example</span>
+<div id="exampleContainer" style="width:540px;background-color:#E0DDB5">
+
+<div id="dragBox" style="display:inline;margin-left:8px;margin-bottom:8px;float:left">
+   <span class="catHeader">availalble name-list</span>
+   <div class="listBox" id="nameList" style="width:250px;height:140px;overflow:auto">
+      <%= javascript_tag "writeNameSpans();"%>
+   </div>
+   <script>createDraggables()</script>
+</div>
+
+<div id="dropBox" style="margin-left:8px;margin-bottom:8px;float:left">
+   <span class="catHeader">dropped name-list</span>
+   <div class="listBox" id="dropZone" style="width:250px;height:140px;overflow:auto;">
+   </div>
+</div>
+
+<div style="clear:both;margin-left:8px">
+   <span id='loghead' class="catHeader">drag-n-drop message log:</span>
+   <div class="logBox" id="logger" style="width:510px;margin-bottom:8px;height:140px;overflow:auto">
+   </div>
+</div>
+
+</div>
+
+<span class="catHeader">the code</span>
+<div class="rc codeBox" id="codeContainer">
+<div class="codeBox" style="height:300px;overflow:auto">
+<pre><span class="code">var CustomDraggable = Class.create();
+
+CustomDraggable.prototype = (new Rico.Draggable()).extend( {
+
+   <b>initialize</b>: function( htmlElement, name ) {
+      this.type        = 'Custom';
+      this.htmlElement = $(htmlElement);
+      this.name        = name;
+   },
+
+   <b>log</b>: function(str) {
+      new Insertion.Bottom( $('logger'), "&lt;span class='logMsg'>" + str + "&lt;/span>" );
+      $('logger').scrollTop = $('logger').lastChild.offsetTop;
+
+   },
+
+   <b>select</b>: function() {
+      this.selected = true;
+      var el = this.htmlElement;
+
+      // show the item selected.....
+      el.style.color           = "#ffffff";
+      el.style.backgroundColor = "#08246b";
+      el.style.border          = "1px solid blue";
+   },
+
+   <b>deselect</b>: function() {
+      this.selected = false;
+      var el = this.htmlElement;
+      el.style.color           = "#2b2b2b";
+      el.style.backgroundColor = "transparent";
+      el.style.border = "1px solid #ffffee";
+   },
+
+   <b>startDrag</b>: function() {
+      var el = this.htmlElement;
+      this.log("startDrag: [" + this.name +"]");
+   },
+
+   <b>cancelDrag</b>: function() {
+      var el = this.htmlElement;
+      this.log("cancelDrag: [" + this.name +"]");
+   },
+
+   <b>endDrag</b>: function() {
+      var el = this.htmlElement;
+      this.log("endDrag: [" + this.name +"]");
+   },
+
+   <b>getSingleObjectDragGUI</b>: function() {
+      var el = this.htmlElement;
+
+      var div = document.createElement("div");
+      div.className = 'customDraggable';
+      div.style.width = this.htmlElement.offsetWidth - 10;
+      new Insertion.Top( div, this.name );
+      return div;
+   },
+
+   <b>getMultiObjectDragGUI</b>: function( draggables ) {
+      var el = this.htmlElement;
+
+      var names = "";
+      for ( var i = 0 ; i < draggables.length ; i++ ) {
+         names += draggables[i].name;
+         if ( i != (draggables.length - 1) )
+            names += ",&lt;br/>";
+      }
+
+      var div = document.createElement("div");
+      div.className = 'customDraggable';
+      div.style.width = this.htmlElement.offsetWidth - 10;
+      new Insertion.Top( div, names );
+      return div;
+   },
+
+   <b>getDroppedGUI</b>: function() {
+      var el = this.htmlElement;
+
+      var div = document.createElement("div");
+      var names = this.name.split(",");
+      new Insertion.Top( div, "&lt;span class='nameSpan'>[" + names[1].substring(1) + " " + names[0]+ "]&lt;/span>" );
+      return div;
+   }
+
+} );</span></pre>
+</div>
+</div>
+
+
+<script>
+  Rico.Corner.round( 'exampleContainer' );
+  Rico.Corner.round( 'codeContainer' );
+  dndMgr.registerDropZone( new Rico.Dropzone($('dropZone')));
+</script>
+

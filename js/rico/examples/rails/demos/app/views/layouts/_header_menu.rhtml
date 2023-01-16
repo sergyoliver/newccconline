@@ -1,0 +1,30 @@
+<div style="padding-top:5px;padding-bottom:5px">
+	<div id="menu" class="menuBox roundNormal">
+		<span class="brand">
+		   <a id="iconLink"      class="menuLink" href="home.page">Rico</a>
+	    </span>
+	   <span class="leftPadding">
+	       <a id="homeLink"      class="menuLink" href="http://openrico.org/home">Home</a>
+	       <a id="demosLink"     class="menuLink" href="http://openrico.org/demos">Demos</a>      
+	       <a id="downloadsLink" class="menuLink" href="http://openrico.org/downloads.page">Downloads</a>
+
+		   <a id="blogLink"      class="menuLink" href="http://weblog.openrico.org/">Weblog</a>
+		   <a id="blogLink"      class="menuLink" href="http://forum.openrico.org/">Forum</a>
+		   <a id="blogLink"      class="menuLink" href="http://wiki.openrico.org/">Wiki</a>
+		   <a id="blogLink"      class="menuLink" href="http://trac.openrico.org:9004/rico">Tracking</a>
+	   </span>
+	</div>
+</div>
+
+
+<script>
+
+   var onloads = new Array();
+   function bodyOnLoad() {
+      new Rico.Effect.Round( null, 'roundNormal' );
+      new Rico.Effect.Round( null, 'roundCompact', {compact:true} );
+      for ( var i = 0 ; i < onloads.length ; i++ )
+         onloads[i]();
+   }
+  showMenuContext()      
+</script>

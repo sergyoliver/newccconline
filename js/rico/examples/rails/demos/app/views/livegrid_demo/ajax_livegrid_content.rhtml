@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ajax-response>
+  <response type="object" id="<%= @params[:id] << '_updater' %>">
+    <rows update_ui="<%= @update_ui %>" >
+        <%= livegrid_results @movies, %w{title genre rating votes year} %>
+    </rows>
+    <rowcount><%= @total_rowcount %></rowcount>
+  </response>
+</ajax-response>

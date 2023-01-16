@@ -1,0 +1,19 @@
+#header{margin: 0 10px; position: relative; width: 1024px;}
+#top-panel {
+  background-color : #6b795a;  
+  height: 17px; 
+  margin: 0px; 
+  padding:0px; 
+  position: relative; 
+  width: 570px; 
+  z-index: 1500; }
+
+#inner_panel {
+  position: relative; 
+  top: 0px; 
+  background-color: #adba8c; 
+  margin:0px; 
+  border: 1px solid #6b795a;}
+  
+#outer_panel {overflow: hidden; position: absolute; z-index: 1600; padding-left: 15px; top: 17px; width: 500px}
+* {font-size        : 11px;}
